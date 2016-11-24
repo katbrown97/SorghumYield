@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="AutoGPS" syncable="YES">
+    <entity name="AutoGPS" representedClassName="AutoGPS" syncable="YES">
         <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lon" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="fieldMeasurement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FieldMeasurement" inverseName="autoGPSData" inverseEntity="FieldMeasurement" syncable="YES"/>
     </entity>
-    <entity name="FieldMeasurement" syncable="YES">
+    <entity name="FieldMeasurement" representedClassName="FieldMeasurement" syncable="YES">
         <attribute name="appAreaAverage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fieldName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="grainsPerPlant" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -19,13 +19,13 @@
         <relationship name="manualGPSData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManualGPS" inverseName="fieldMeasurement" inverseEntity="ManualGPS" syncable="YES"/>
         <relationship name="measurements" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Measurement" inverseName="measurementFile" inverseEntity="Measurement" syncable="YES"/>
     </entity>
-    <entity name="ManualGPS" syncable="YES">
+    <entity name="ManualGPS" representedClassName="ManualGPS" syncable="YES">
         <attribute name="countryName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="countyName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stateName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fieldMeasurement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FieldMeasurement" inverseName="manualGPSData" inverseEntity="FieldMeasurement" syncable="YES"/>
     </entity>
-    <entity name="Measurement" syncable="YES">
+    <entity name="Measurement" representedClassName="Measurement" syncable="YES">
         <attribute name="appArea" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="measurementID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="processedImage" optional="YES" attributeType="Binary" syncable="YES"/>

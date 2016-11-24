@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
+#import "IntroViewController.h"
+#import "DataController.h"
 @interface AppDelegate ()
+
+@property (strong, nonatomic) DataController *dataController;
 
 @end
 
@@ -17,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self setDataController:[[DataController alloc]init]];
+    
+    UINavigationController * nVC = (UINavigationController *) self.window.rootViewController;
+    IntroViewController  * vc = (IntroViewController *)nVC.topViewController;
+    NSManagedObjectContext * coreDataContext = [[self dataController] managedObjectContext];
+    vc.managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"FieldMeasurement" inManagedObjectContext: coreDataContext];
+    
+    
     return YES;
 }
 

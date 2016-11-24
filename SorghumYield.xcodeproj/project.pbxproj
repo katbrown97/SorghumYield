@@ -15,12 +15,15 @@
 		4B4961411DE63EFA0085D4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4961401DE63EFA0085D4FE /* Assets.xcassets */; };
 		4B4961441DE63EFA0085D4FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4961421DE63EFA0085D4FE /* LaunchScreen.storyboard */; };
 		4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B49614C1DE641590085D4FE /* ImageAnalysis.mm */; };
-		4B4961541DE649A80085D4FE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4961531DE649A80085D4FE /* BaseViewController.m */; };
+		4B806B8C1DE65B3900768A09 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B8B1DE65B3900768A09 /* BaseViewController.m */; };
+		4B806B921DE65E3E00768A09 /* FieldDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B911DE65E3E00768A09 /* FieldDataViewController.m */; };
+		4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */; };
 		8D2B816F578FA08401954543 /* libPods-SorghumYield.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYield.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B35826D1DE77956008DE1BD /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataController.h; path = SorghumYield/DataController.h; sourceTree = "<group>"; };
 		4B49612E1DE63EFA0085D4FE /* SorghumYield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SorghumYield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4961321DE63EFA0085D4FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B4961341DE63EFA0085D4FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,8 +37,12 @@
 		4B4961451DE63EFA0085D4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B49614C1DE641590085D4FE /* ImageAnalysis.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageAnalysis.mm; path = SorghumYield/ImageAnalysis.mm; sourceTree = "<group>"; };
 		4B49614D1DE641590085D4FE /* ImageAnalysis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageAnalysis.hpp; path = SorghumYield/ImageAnalysis.hpp; sourceTree = "<group>"; };
-		4B4961521DE649A80085D4FE /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		4B4961531DE649A80085D4FE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4B806B8A1DE65B3900768A09 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4B806B8B1DE65B3900768A09 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4B806B901DE65E3E00768A09 /* FieldDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FieldDataViewController.h; path = SorghumYield/FieldDataViewController.h; sourceTree = "<group>"; };
+		4B806B911DE65E3E00768A09 /* FieldDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FieldDataViewController.m; path = SorghumYield/FieldDataViewController.m; sourceTree = "<group>"; };
+		4B806B941DE660C300768A09 /* UITextField+TFCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+TFCustomization.h"; path = "SorghumYield/UITextField+TFCustomization.h"; sourceTree = "<group>"; };
+		4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TFCustomization.m"; path = "SorghumYield/UITextField+TFCustomization.m"; sourceTree = "<group>"; };
 		582259220ED452102DAAD6B9 /* Pods-SorghumYield.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.debug.xcconfig"; sourceTree = "<group>"; };
 		FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,9 +67,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B35826C1DE77930008DE1BD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4B35826D1DE77956008DE1BD /* DataController.h */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		4B4961251DE63EFA0085D4FE = {
 			isa = PBXGroup;
 			children = (
+				4B806B6D1DE6588000768A09 /* Model */,
 				4B49614B1DE640D00085D4FE /* Image Analysis */,
 				4B4961301DE63EFA0085D4FE /* SorghumYield */,
 				4B49612F1DE63EFA0085D4FE /* Products */,
@@ -90,7 +106,6 @@
 				4B4961401DE63EFA0085D4FE /* Assets.xcassets */,
 				4B4961421DE63EFA0085D4FE /* LaunchScreen.storyboard */,
 				4B4961451DE63EFA0085D4FE /* Info.plist */,
-				4B49613D1DE63EFA0085D4FE /* SorghumYield.xcdatamodeld */,
 				4B4961311DE63EFA0085D4FE /* Supporting Files */,
 			);
 			path = SorghumYield;
@@ -116,6 +131,7 @@
 		4B49614F1DE648FE0085D4FE /* Convenience */ = {
 			isa = PBXGroup;
 			children = (
+				4B806B931DE6609B00768A09 /* Extensions */,
 				4B4961561DE64D070085D4FE /* Buttons */,
 				4B4961551DE64CFA0085D4FE /* Controller */,
 			);
@@ -126,8 +142,8 @@
 		4B4961551DE64CFA0085D4FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4B4961521DE649A80085D4FE /* BaseViewController.h */,
-				4B4961531DE649A80085D4FE /* BaseViewController.m */,
+				4B806B8A1DE65B3900768A09 /* BaseViewController.h */,
+				4B806B8B1DE65B3900768A09 /* BaseViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -142,11 +158,39 @@
 		4B4961571DE6510A0085D4FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B806B901DE65E3E00768A09 /* FieldDataViewController.h */,
+				4B806B911DE65E3E00768A09 /* FieldDataViewController.m */,
 				4B4961371DE63EFA0085D4FE /* IntroViewController.h */,
 				4B4961381DE63EFA0085D4FE /* IntroViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		4B806B6D1DE6588000768A09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B35826C1DE77930008DE1BD /* CoreData */,
+				4B806B6E1DE6588900768A09 /* Subclass */,
+				4B49613D1DE63EFA0085D4FE /* SorghumYield.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4B806B6E1DE6588900768A09 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclass;
+			sourceTree = "<group>";
+		};
+		4B806B931DE6609B00768A09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B806B941DE660C300768A09 /* UITextField+TFCustomization.h */,
+				4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		6220F7803D13F35EB4629859 /* Pods */ = {
@@ -193,6 +237,7 @@
 					4B49612D1DE63EFA0085D4FE = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 89BJZQ46QR;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -282,11 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4961391DE63EFA0085D4FE /* IntroViewController.m in Sources */,
-				4B4961541DE649A80085D4FE /* BaseViewController.m in Sources */,
 				4B49613F1DE63EFA0085D4FE /* SorghumYield.xcdatamodeld in Sources */,
 				4B4961361DE63EFA0085D4FE /* AppDelegate.m in Sources */,
+				4B806B8C1DE65B3900768A09 /* BaseViewController.m in Sources */,
 				4B4961331DE63EFA0085D4FE /* main.m in Sources */,
+				4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */,
 				4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */,
+				4B806B921DE65E3E00768A09 /* FieldDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,11 +454,15 @@
 			baseConfigurationReference = 582259220ED452102DAAD6B9 /* Pods-SorghumYield.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 89BJZQ46QR;
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYield-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -420,11 +471,14 @@
 			baseConfigurationReference = FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 89BJZQ46QR;
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYield-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -458,7 +512,8 @@
 				4B49613E1DE63EFA0085D4FE /* SorghumYield.xcdatamodel */,
 			);
 			currentVersion = 4B49613E1DE63EFA0085D4FE /* SorghumYield.xcdatamodel */;
-			path = SorghumYield.xcdatamodeld;
+			name = SorghumYield.xcdatamodeld;
+			path = SorghumYield/SorghumYield.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

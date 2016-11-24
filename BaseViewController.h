@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+@interface BaseViewController : UIViewController <UITextFieldDelegate>
 
-@interface BaseViewController : UIViewController
-
-@property (strong) NSManagedObjectContext * managedObjectContext;
-
+@property (strong) NSManagedObject * managedObject;
+@property UIToolbar* numberToolbar ;
+- (void) addToolBarToKeyboardForUITF:(UITextField *) textField ;
 @end

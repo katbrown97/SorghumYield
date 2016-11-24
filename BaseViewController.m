@@ -16,9 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setBackgroundImage:@"background"];
+//    [self setBackgroundImage:@"background"];
     [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
-    
+    [self setToolbar];
+}
+
+- (void)setToolbar{
+    _numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    _numberToolbar.barStyle = UIBarStyleDefault;
+    _numberToolbar.items = [NSArray arrayWithObjects:
+                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                            nil];
+    [_numberToolbar sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,8 +48,19 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     UIViewController* logView = segue.destinationViewController;
     if( [logView respondsToSelector:@selector(setManagedObjectContext:)] ) {
-        [logView setValue:self.managedObjectContext forKey:@"managedObjectContext"];
+        [logView setValue:self.managedObject forKey:@"managedObject"];
     }
 }
+
+
+- (void) addToolBarToKeyboardForUITF:(UITextField *) textField  {
+    
+    textField.inputAccessoryView = _numberToolbar;
+}
+-(void) doneWithNumberPad{
+    [self.view endEditing:YES];
+    
+}
+
 
 @end
