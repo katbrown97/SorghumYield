@@ -38,9 +38,7 @@
     
     [self setTitle:@"Take/upload photos"];
     
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    self.navigationItem.leftBarButtonItem=nil;
-    self.navigationItem.hidesBackButton=YES;
+    [super disableBackButton];
 }
 
 -(void) initialiazeMediaPicker: (UIImagePickerControllerSourceType) imagePickerType{
@@ -70,7 +68,7 @@
     
     NSManagedObjectContext * managedObjectContext = [self.managedObject managedObjectContext];
     
-    NSMutableSet * measurementsToAdd = [self.managedObject mutableSetValueForKey:@"measurements"];//[[NSMutableSet alloc] init];
+    NSMutableSet * measurementsToAdd = [self.managedObject mutableSetValueForKey:@"measurements"];
     int photoID =0;
     for(Measurement * curMeasurement in _measurements){
         finalAverage += [[curMeasurement appArea]doubleValue];
@@ -91,6 +89,7 @@
     finalAverage/= _measurements.count;
     
     [self.managedObject setValue:[NSNumber numberWithFloat:finalAverage] forKey:@"appAreaAverage"];
+    [self performSegueWithIdentifier:@"resultSegue" sender:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -164,15 +163,8 @@
     {
         ImageAcceptingViewController * vc = [segue destinationViewController];
         [vc setMeasurementHolder:_currentMeasurement];
-        
     }
-    if ([[segue identifier] isEqualToString:@"FinalSegue"]) {
-        UIViewController* logView = segue.destinationViewController;
-        if( [logView respondsToSelector:@selector(setManagedObject:)] ) {
-            [logView setValue:self.managedObject forKey:@"managedObject"];
-        }
-        
-    }
+    [super prepareForSegue:segue sender:sender];
 }
 -(void)updateLabel{
     NSString * message;

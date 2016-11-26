@@ -103,17 +103,6 @@
     return 0;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"TutorialEnd"])
-    {
-        UIViewController* logView = segue.destinationViewController;
-        if( [logView respondsToSelector:@selector(setManagedObject:)] ) {
-            [logView setValue:self.managedObject forKey:@"managedObject"];
-        }
-        
-    }
-}
-
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers{
     
     if([pendingViewControllers[0] pageIndex]==_pageImages.count-1){

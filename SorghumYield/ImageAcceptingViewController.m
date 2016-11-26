@@ -49,11 +49,11 @@ const static bool animates= NO;
     [_roundedView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [_roundedView.layer setBorderWidth:1.0f];
     
-    // drop shadow
-    [_roundedView.layer setShadowColor:[UIColor blackColor].CGColor];
-    [_roundedView.layer setShadowOpacity:0.3];
-    [_roundedView.layer setShadowRadius:2.0];
-    [_roundedView.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+//    // drop shadow
+//    [_roundedView.layer setShadowColor:[UIColor blackColor].CGColor];
+//    [_roundedView.layer setShadowOpacity:0.3];
+//    [_roundedView.layer setShadowRadius:2.0];
+//    [_roundedView.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
     _roundedView.layer.masksToBounds = true;
     
 }

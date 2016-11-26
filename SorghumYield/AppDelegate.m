@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "IntroViewController.h"
 #import "DataController.h"
+#import "FirebaseManager.h"
 @interface AppDelegate ()
 
 @property (strong, nonatomic) DataController *dataController;
@@ -27,9 +28,9 @@
     IntroViewController  * vc = (IntroViewController *)nVC.topViewController;
     NSManagedObjectContext * coreDataContext = [[self dataController] managedObjectContext];
     vc.managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"FieldMeasurement" inManagedObjectContext: coreDataContext];
+ 
     
-    
-    
+    [[FirebaseManager sharedFirebaseManager]  setupDatabase];
     return YES;
 }
 
