@@ -12,5 +12,7 @@
 
 @property (strong) NSManagedObject * managedObject;
 @property UIToolbar* numberToolbar ;
-- (void) addToolBarToKeyboardForUITF:(UITextField *) textField ;
+- (void) addToolBarToKeyboardForUITF:(UITextField *) textField;
+- (void) presentAlert:(NSString * ) stringToDisplay withTitle:(NSString * ) title;
+- (void) disableBackButton;
 @end

@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // TO:DO ++ Move this into viewcontroller to disable app wide
-    [self disableBackButton];
+    
+[self disableBackButton];
     
     _locationManager = [[CLLocationManager alloc] init];
     CLAuthorizationStatus currentStatus =  [CLLocationManager authorizationStatus];
@@ -50,11 +50,7 @@
     
     
 }
--(void)disableBackButton{
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    self.navigationItem.leftBarButtonItem=nil;
-    self.navigationItem.hidesBackButton=YES;
-}
+
 
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status{

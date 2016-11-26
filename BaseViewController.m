@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self setBackgroundImage:@"background"];
     [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     [self setToolbar];
 }
@@ -59,6 +58,23 @@
 - (void) addToolBarToKeyboardForUITF:(UITextField *) textField  {
     
     textField.inputAccessoryView = _numberToolbar;
+}
+-(void ) presentAlert:(NSString * ) stringToDisplay withTitle:(NSString * ) title{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:stringToDisplay
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:nil];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void)disableBackButton{
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationItem.leftBarButtonItem=nil;
+    self.navigationItem.hidesBackButton=YES;
 }
 
 

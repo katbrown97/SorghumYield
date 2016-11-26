@@ -124,12 +124,12 @@
 }
 
 - (IBAction)nextButtonPress:(id)sender {
-    // Create a new managed object
-    
     [self.managedObject setValue:self.fieldName.text forKey:@"fieldName"];
     [self.managedObject setValue:[NSNumber numberWithInt:[self.numberOfAcres.text intValue]] forKey:@"numOfAcres"];
 
     [self.managedObject setValue:[NSNumber numberWithFloat:[_rowSpacings[[_rowPicker selectedRowInComponent:0]] floatValue]] forKey:@"rowSpacing"];
     [self.managedObject setValue:[NSNumber numberWithInt:[_rowPicker selectedRowInComponent:1] ] forKey:@"headsPerThousandth"];
+    
+    [self performSegueWithIdentifier:@"fieldDataDone" sender:nil];
 }
 @end

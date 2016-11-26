@@ -19,6 +19,11 @@
 		4B4961411DE63EFA0085D4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4961401DE63EFA0085D4FE /* Assets.xcassets */; };
 		4B4961441DE63EFA0085D4FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4961421DE63EFA0085D4FE /* LaunchScreen.storyboard */; };
 		4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B49614C1DE641590085D4FE /* ImageAnalysis.mm */; };
+		4B6647661DE9D458001666C3 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6647651DE9D458001666C3 /* PageContentViewController.m */; };
+		4B6647691DE9D636001666C3 /* PageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6647681DE9D636001666C3 /* PageRootViewController.m */; };
+		4B66476C1DE9F006001666C3 /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B66476B1DE9F006001666C3 /* PhotoPickerViewController.m */; };
+		4B6647701DE9F046001666C3 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B66476F1DE9F046001666C3 /* Measurement.m */; };
+		4B6647731DE9F0EF001666C3 /* ImageAcceptingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6647721DE9F0EF001666C3 /* ImageAcceptingViewController.m */; };
 		4B806B8C1DE65B3900768A09 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B8B1DE65B3900768A09 /* BaseViewController.m */; };
 		4B806B921DE65E3E00768A09 /* FieldDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B911DE65E3E00768A09 /* FieldDataViewController.m */; };
 		4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */; };
@@ -47,6 +52,16 @@
 		4B4961451DE63EFA0085D4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B49614C1DE641590085D4FE /* ImageAnalysis.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageAnalysis.mm; path = SorghumYield/ImageAnalysis.mm; sourceTree = "<group>"; };
 		4B49614D1DE641590085D4FE /* ImageAnalysis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageAnalysis.hpp; path = SorghumYield/ImageAnalysis.hpp; sourceTree = "<group>"; };
+		4B6647641DE9D458001666C3 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = SorghumYield/PageContentViewController.h; sourceTree = "<group>"; };
+		4B6647651DE9D458001666C3 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageContentViewController.m; path = SorghumYield/PageContentViewController.m; sourceTree = "<group>"; };
+		4B6647671DE9D636001666C3 /* PageRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageRootViewController.h; path = SorghumYield/PageRootViewController.h; sourceTree = "<group>"; };
+		4B6647681DE9D636001666C3 /* PageRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageRootViewController.m; path = SorghumYield/PageRootViewController.m; sourceTree = "<group>"; };
+		4B66476A1DE9F006001666C3 /* PhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoPickerViewController.h; path = SorghumYield/PhotoPickerViewController.h; sourceTree = "<group>"; };
+		4B66476B1DE9F006001666C3 /* PhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoPickerViewController.m; path = SorghumYield/PhotoPickerViewController.m; sourceTree = "<group>"; };
+		4B66476E1DE9F046001666C3 /* Measurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Measurement.h; path = SorghumYield/Measurement.h; sourceTree = "<group>"; };
+		4B66476F1DE9F046001666C3 /* Measurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Measurement.m; path = SorghumYield/Measurement.m; sourceTree = "<group>"; };
+		4B6647711DE9F0EF001666C3 /* ImageAcceptingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageAcceptingViewController.h; path = SorghumYield/ImageAcceptingViewController.h; sourceTree = "<group>"; };
+		4B6647721DE9F0EF001666C3 /* ImageAcceptingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageAcceptingViewController.m; path = SorghumYield/ImageAcceptingViewController.m; sourceTree = "<group>"; };
 		4B806B8A1DE65B3900768A09 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		4B806B8B1DE65B3900768A09 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4B806B901DE65E3E00768A09 /* FieldDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FieldDataViewController.h; path = SorghumYield/FieldDataViewController.h; sourceTree = "<group>"; };
@@ -88,6 +103,8 @@
 		4B3582751DE79C7D008DE1BD /* GeoData */ = {
 			isa = PBXGroup;
 			children = (
+				4B3582731DE79C63008DE1BD /* StateCounties.csv */,
+				4B3582761DE79C9A008DE1BD /* CountryList.csv */,
 				4B3582781DE79CC9008DE1BD /* GeoDataLoader.h */,
 				4B3582791DE79CC9008DE1BD /* GeoDataLoader.m */,
 			);
@@ -97,8 +114,6 @@
 		4B4961251DE63EFA0085D4FE = {
 			isa = PBXGroup;
 			children = (
-				4B3582731DE79C63008DE1BD /* StateCounties.csv */,
-				4B3582761DE79C9A008DE1BD /* CountryList.csv */,
 				4B806B6D1DE6588000768A09 /* Model */,
 				4B49614B1DE640D00085D4FE /* Image Analysis */,
 				4B4961301DE63EFA0085D4FE /* SorghumYield */,
@@ -179,20 +194,46 @@
 		4B4961571DE6510A0085D4FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B6647631DE9D2FC001666C3 /* Page Controller */,
 				4B806B901DE65E3E00768A09 /* FieldDataViewController.h */,
 				4B806B911DE65E3E00768A09 /* FieldDataViewController.m */,
 				4B4961371DE63EFA0085D4FE /* IntroViewController.h */,
 				4B4961381DE63EFA0085D4FE /* IntroViewController.m */,
 				4B3582701DE79BF6008DE1BD /* GeoLocationViewController.h */,
 				4B3582711DE79BF6008DE1BD /* GeoLocationViewController.m */,
+				4B66476A1DE9F006001666C3 /* PhotoPickerViewController.h */,
+				4B66476B1DE9F006001666C3 /* PhotoPickerViewController.m */,
+				4B6647711DE9F0EF001666C3 /* ImageAcceptingViewController.h */,
+				4B6647721DE9F0EF001666C3 /* ImageAcceptingViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
 			sourceTree = "<group>";
 		};
+		4B6647631DE9D2FC001666C3 /* Page Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B6647641DE9D458001666C3 /* PageContentViewController.h */,
+				4B6647651DE9D458001666C3 /* PageContentViewController.m */,
+				4B6647671DE9D636001666C3 /* PageRootViewController.h */,
+				4B6647681DE9D636001666C3 /* PageRootViewController.m */,
+			);
+			name = "Page Controller";
+			sourceTree = "<group>";
+		};
+		4B66476D1DE9F033001666C3 /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+				4B66476E1DE9F046001666C3 /* Measurement.h */,
+				4B66476F1DE9F046001666C3 /* Measurement.m */,
+			);
+			name = Measurement;
+			sourceTree = "<group>";
+		};
 		4B806B6D1DE6588000768A09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B66476D1DE9F033001666C3 /* Measurement */,
 				4B3582751DE79C7D008DE1BD /* GeoData */,
 				4B35826C1DE77930008DE1BD /* CoreData */,
 				4B806B6E1DE6588900768A09 /* Subclass */,
@@ -354,13 +395,18 @@
 			files = (
 				4B35827A1DE79CC9008DE1BD /* GeoDataLoader.m in Sources */,
 				4B4961391DE63EFA0085D4FE /* IntroViewController.m in Sources */,
+				4B6647661DE9D458001666C3 /* PageContentViewController.m in Sources */,
 				4B49613F1DE63EFA0085D4FE /* SorghumYield.xcdatamodeld in Sources */,
 				4B4961361DE63EFA0085D4FE /* AppDelegate.m in Sources */,
 				4B806B8C1DE65B3900768A09 /* BaseViewController.m in Sources */,
+				4B6647731DE9F0EF001666C3 /* ImageAcceptingViewController.m in Sources */,
 				4B4961331DE63EFA0085D4FE /* main.m in Sources */,
+				4B6647691DE9D636001666C3 /* PageRootViewController.m in Sources */,
 				4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */,
+				4B66476C1DE9F006001666C3 /* PhotoPickerViewController.m in Sources */,
 				4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */,
 				4B3582721DE79BF6008DE1BD /* GeoLocationViewController.m in Sources */,
+				4B6647701DE9F046001666C3 /* Measurement.m in Sources */,
 				4B806B921DE65E3E00768A09 /* FieldDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
