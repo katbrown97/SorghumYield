@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SorghumYield/FieldDataViewController.m"
-            timestampString = "501716779.590532"
+            filePath = "SorghumYield/GeoDataLoader.m"
+            timestampString = "501862702.940144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-nextButtonPress:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-stateCountyDictionaryFromCSV"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

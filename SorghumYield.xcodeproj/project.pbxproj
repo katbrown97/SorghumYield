@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3582721DE79BF6008DE1BD /* GeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3582711DE79BF6008DE1BD /* GeoLocationViewController.m */; };
+		4B3582741DE79C63008DE1BD /* StateCounties.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B3582731DE79C63008DE1BD /* StateCounties.csv */; };
+		4B3582771DE79C9A008DE1BD /* CountryList.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B3582761DE79C9A008DE1BD /* CountryList.csv */; };
+		4B35827A1DE79CC9008DE1BD /* GeoDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3582791DE79CC9008DE1BD /* GeoDataLoader.m */; };
 		4B4961331DE63EFA0085D4FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4961321DE63EFA0085D4FE /* main.m */; };
 		4B4961361DE63EFA0085D4FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4961351DE63EFA0085D4FE /* AppDelegate.m */; };
 		4B4961391DE63EFA0085D4FE /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4961381DE63EFA0085D4FE /* IntroViewController.m */; };
@@ -24,6 +28,12 @@
 /* Begin PBXFileReference section */
 		3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYield.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B35826D1DE77956008DE1BD /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataController.h; path = SorghumYield/DataController.h; sourceTree = "<group>"; };
+		4B3582701DE79BF6008DE1BD /* GeoLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoLocationViewController.h; path = SorghumYield/GeoLocationViewController.h; sourceTree = "<group>"; };
+		4B3582711DE79BF6008DE1BD /* GeoLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoLocationViewController.m; path = SorghumYield/GeoLocationViewController.m; sourceTree = "<group>"; };
+		4B3582731DE79C63008DE1BD /* StateCounties.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StateCounties.csv; path = SorghumYield/StateCounties.csv; sourceTree = "<group>"; };
+		4B3582761DE79C9A008DE1BD /* CountryList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CountryList.csv; path = SorghumYield/CountryList.csv; sourceTree = "<group>"; };
+		4B3582781DE79CC9008DE1BD /* GeoDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoDataLoader.h; path = SorghumYield/GeoDataLoader.h; sourceTree = "<group>"; };
+		4B3582791DE79CC9008DE1BD /* GeoDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoDataLoader.m; path = SorghumYield/GeoDataLoader.m; sourceTree = "<group>"; };
 		4B49612E1DE63EFA0085D4FE /* SorghumYield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SorghumYield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4961321DE63EFA0085D4FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B4961341DE63EFA0085D4FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,9 +85,20 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		4B3582751DE79C7D008DE1BD /* GeoData */ = {
+			isa = PBXGroup;
+			children = (
+				4B3582781DE79CC9008DE1BD /* GeoDataLoader.h */,
+				4B3582791DE79CC9008DE1BD /* GeoDataLoader.m */,
+			);
+			name = GeoData;
+			sourceTree = "<group>";
+		};
 		4B4961251DE63EFA0085D4FE = {
 			isa = PBXGroup;
 			children = (
+				4B3582731DE79C63008DE1BD /* StateCounties.csv */,
+				4B3582761DE79C9A008DE1BD /* CountryList.csv */,
 				4B806B6D1DE6588000768A09 /* Model */,
 				4B49614B1DE640D00085D4FE /* Image Analysis */,
 				4B4961301DE63EFA0085D4FE /* SorghumYield */,
@@ -162,6 +183,8 @@
 				4B806B911DE65E3E00768A09 /* FieldDataViewController.m */,
 				4B4961371DE63EFA0085D4FE /* IntroViewController.h */,
 				4B4961381DE63EFA0085D4FE /* IntroViewController.m */,
+				4B3582701DE79BF6008DE1BD /* GeoLocationViewController.h */,
+				4B3582711DE79BF6008DE1BD /* GeoLocationViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -170,6 +193,7 @@
 		4B806B6D1DE6588000768A09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B3582751DE79C7D008DE1BD /* GeoData */,
 				4B35826C1DE77930008DE1BD /* CoreData */,
 				4B806B6E1DE6588900768A09 /* Subclass */,
 				4B49613D1DE63EFA0085D4FE /* SorghumYield.xcdatamodeld */,
@@ -265,7 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3582741DE79C63008DE1BD /* StateCounties.csv in Resources */,
 				4B4961441DE63EFA0085D4FE /* LaunchScreen.storyboard in Resources */,
+				4B3582771DE79C9A008DE1BD /* CountryList.csv in Resources */,
 				4B4961411DE63EFA0085D4FE /* Assets.xcassets in Resources */,
 				4B49613C1DE63EFA0085D4FE /* Main.storyboard in Resources */,
 			);
@@ -326,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B35827A1DE79CC9008DE1BD /* GeoDataLoader.m in Sources */,
 				4B4961391DE63EFA0085D4FE /* IntroViewController.m in Sources */,
 				4B49613F1DE63EFA0085D4FE /* SorghumYield.xcdatamodeld in Sources */,
 				4B4961361DE63EFA0085D4FE /* AppDelegate.m in Sources */,
@@ -333,6 +360,7 @@
 				4B4961331DE63EFA0085D4FE /* main.m in Sources */,
 				4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */,
 				4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */,
+				4B3582721DE79BF6008DE1BD /* GeoLocationViewController.m in Sources */,
 				4B806B921DE65E3E00768A09 /* FieldDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

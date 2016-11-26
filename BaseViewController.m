@@ -46,20 +46,19 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    UIViewController* logView = segue.destinationViewController;
-    if( [logView respondsToSelector:@selector(setManagedObjectContext:)] ) {
-        [logView setValue:self.managedObject forKey:@"managedObject"];
+    UIViewController* nextVC = segue.destinationViewController;
+    if( [nextVC isKindOfClass:[BaseViewController class]] ) {
+        [nextVC setValue:self.managedObject forKey:@"managedObject"];
     }
+}
+- (void) doneWithNumberPad{
+    [self.view endEditing:YES];
 }
 
 
 - (void) addToolBarToKeyboardForUITF:(UITextField *) textField  {
     
     textField.inputAccessoryView = _numberToolbar;
-}
--(void) doneWithNumberPad{
-    [self.view endEditing:YES];
-    
 }
 
 

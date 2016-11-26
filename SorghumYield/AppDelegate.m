@@ -29,6 +29,7 @@
     vc.managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"FieldMeasurement" inManagedObjectContext: coreDataContext];
     
     
+    
     return YES;
 }
 
