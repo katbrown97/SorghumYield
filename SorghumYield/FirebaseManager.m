@@ -57,5 +57,37 @@
     }];
 }
 
+-(void) storeImages : (FIRDatabaseReference*) measurementRef : (NSManagedObject*) managedObject {
+    
+    NSMutableSet * measurements = [managedObject valueForKey:@"measurements"];
+    
+    FIRDatabaseReference * photoMeasurementRef = [measurementRef child:@"photoMeasurements"];
+    
+    FIRStorage *storage = [FIRStorage storage];
+    
+    // Create a storage reference from our storage service
+    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://sorghumthesis.appspot.com"];
+    
+    
+    NSString * measurementRefKey =[measurementRef key];
+    
+    FIRStorageReference * folder = [storageRef child:measurementRefKey];
+    NSData * fileData =[[NSString stringWithFormat:@"%@", managedObject]dataUsingEncoding: NSUTF8StringEncoding ];
+    
+    [[FirebaseManager sharedFirebaseManager] prepareFileUpload:folder :@"Report" withExtension:@"txt" andDataSource:fileData];
+    
+    for(NSManagedObjectModel * measurementObject in measurements){
+        
+        NSString * childID = [[measurementObject valueForKey:@"measurementID"] stringValue];
+        FIRDatabaseReference * photoMeasurementInstance = [photoMeasurementRef child:childID];
+        
+        [photoMeasurementInstance setValue:@{@"appArea" :[measurementObject valueForKey:@"appArea"] }];
+        
+        NSData * imageData =[measurementObject valueForKey:@"processedImage"];
+        
+        [[FirebaseManager sharedFirebaseManager] prepareFileUpload:folder :childID withExtension:@"jpg" andDataSource:imageData];
+    }
+}
+
 
 @end
