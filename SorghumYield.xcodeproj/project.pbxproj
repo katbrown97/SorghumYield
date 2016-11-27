@@ -560,6 +560,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
 				DEVELOPMENT_TEAM = 89BJZQ46QR;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield;
@@ -578,6 +579,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
 				DEVELOPMENT_TEAM = 89BJZQ46QR;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield;
