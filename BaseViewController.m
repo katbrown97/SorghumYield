@@ -36,7 +36,6 @@
 }
 
 -(void) setBackgroundImage: (NSString * ) imageNameString{
-    
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageNameString]];
     [self.view addSubview:backgroundView];
     backgroundView.frame = self.view.bounds;
@@ -48,6 +47,10 @@
     UIViewController* nextVC = segue.destinationViewController;
     if( [nextVC isKindOfClass:[BaseViewController class]] ) {
         [nextVC setValue:self.managedObject forKey:@"managedObject"];
+    } else if ([nextVC isKindOfClass:[UINavigationController class]]){
+        UINavigationController * nVC = (UINavigationController*)nextVC;
+        BaseViewController * bVC =  (BaseViewController * )nVC.viewControllers.firstObject;
+        [bVC setManagedObject:self.managedObject];
     }
 }
 - (void) doneWithNumberPad{

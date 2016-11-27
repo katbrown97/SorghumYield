@@ -21,6 +21,7 @@
 		4B4961411DE63EFA0085D4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4961401DE63EFA0085D4FE /* Assets.xcassets */; };
 		4B4961441DE63EFA0085D4FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4961421DE63EFA0085D4FE /* LaunchScreen.storyboard */; };
 		4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B49614C1DE641590085D4FE /* ImageAnalysis.mm */; };
+		4B61038D1DEB39B7009C9661 /* AdditionalInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B61038C1DEB39B7009C9661 /* AdditionalInfoTableViewController.m */; };
 		4B6647661DE9D458001666C3 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6647651DE9D458001666C3 /* PageContentViewController.m */; };
 		4B6647691DE9D636001666C3 /* PageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6647681DE9D636001666C3 /* PageRootViewController.m */; };
 		4B66476C1DE9F006001666C3 /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B66476B1DE9F006001666C3 /* PhotoPickerViewController.m */; };
@@ -58,6 +59,9 @@
 		4B4961451DE63EFA0085D4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B49614C1DE641590085D4FE /* ImageAnalysis.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageAnalysis.mm; path = SorghumYield/ImageAnalysis.mm; sourceTree = "<group>"; };
 		4B49614D1DE641590085D4FE /* ImageAnalysis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageAnalysis.hpp; path = SorghumYield/ImageAnalysis.hpp; sourceTree = "<group>"; };
+		4B6103871DEB356E009C9661 /* SorghumYield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SorghumYield.entitlements; sourceTree = "<group>"; };
+		4B61038B1DEB39B7009C9661 /* AdditionalInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdditionalInfoTableViewController.h; path = SorghumYield/AdditionalInfoTableViewController.h; sourceTree = "<group>"; };
+		4B61038C1DEB39B7009C9661 /* AdditionalInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdditionalInfoTableViewController.m; path = SorghumYield/AdditionalInfoTableViewController.m; sourceTree = "<group>"; };
 		4B6647641DE9D458001666C3 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = SorghumYield/PageContentViewController.h; sourceTree = "<group>"; };
 		4B6647651DE9D458001666C3 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageContentViewController.m; path = SorghumYield/PageContentViewController.m; sourceTree = "<group>"; };
 		4B6647671DE9D636001666C3 /* PageRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageRootViewController.h; path = SorghumYield/PageRootViewController.h; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		4B4961301DE63EFA0085D4FE /* SorghumYield */ = {
 			isa = PBXGroup;
 			children = (
+				4B6103871DEB356E009C9661 /* SorghumYield.entitlements */,
 				4B49614F1DE648FE0085D4FE /* Convenience */,
 				4B4961571DE6510A0085D4FE /* ViewControllers */,
 				4B4961341DE63EFA0085D4FE /* AppDelegate.h */,
@@ -216,6 +221,8 @@
 				4B6647721DE9F0EF001666C3 /* ImageAcceptingViewController.m */,
 				4B6647741DEA3370001666C3 /* ResultViewController.h */,
 				4B6647751DEA3370001666C3 /* ResultViewController.m */,
+				4B61038B1DEB39B7009C9661 /* AdditionalInfoTableViewController.h */,
+				4B61038C1DEB39B7009C9661 /* AdditionalInfoTableViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -317,6 +324,11 @@
 						DevelopmentTeam = 89BJZQ46QR;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -419,6 +431,7 @@
 				4B6647691DE9D636001666C3 /* PageRootViewController.m in Sources */,
 				4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */,
 				4B66476C1DE9F006001666C3 /* PhotoPickerViewController.m in Sources */,
+				4B61038D1DEB39B7009C9661 /* AdditionalInfoTableViewController.m in Sources */,
 				4B49614E1DE641590085D4FE /* ImageAnalysis.mm in Sources */,
 				4B3582721DE79BF6008DE1BD /* GeoLocationViewController.m in Sources */,
 				4B6647701DE9F046001666C3 /* Measurement.m in Sources */,
@@ -545,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
 				DEVELOPMENT_TEAM = 89BJZQ46QR;
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -562,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
 				DEVELOPMENT_TEAM = 89BJZQ46QR;
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

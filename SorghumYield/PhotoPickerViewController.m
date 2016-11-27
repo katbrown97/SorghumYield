@@ -35,9 +35,7 @@
 }
 
 - (void)setupView{
-    
     [self setTitle:@"Take/upload photos"];
-    
     [super disableBackButton];
 }
 
@@ -45,9 +43,7 @@
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = NO;
-    
     picker.sourceType = imagePickerType;
-    
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
@@ -221,7 +217,7 @@
 -(UIImage*) rotate:(UIImage*) src andOrientation:(UIImageOrientation)orientation
 {
     UIGraphicsBeginImageContext(src.size);
-    
+
     CGContextRef context=(UIGraphicsGetCurrentContext());
     
     if (orientation == UIImageOrientationRight) {
@@ -238,7 +234,6 @@
     UIImage *img=UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return img;
-    
 }
 
 @end

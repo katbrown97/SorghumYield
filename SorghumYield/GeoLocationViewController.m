@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-[self disableBackButton];
+    [self disableBackButton];
     
     _locationManager = [[CLLocationManager alloc] init];
     CLAuthorizationStatus currentStatus =  [CLLocationManager authorizationStatus];

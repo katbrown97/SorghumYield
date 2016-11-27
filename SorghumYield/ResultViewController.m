@@ -202,7 +202,7 @@ static NSString * baseText = @"Seeds per lb";
     FIRStorage *storage = [FIRStorage storage];
     
     // Create a storage reference from our storage service
-    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://sorghumbuild.appspot.com"];
+    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://sorghumthesis.appspot.com"];
     
     
     NSString * measurementRefKey =[measurementRef key];

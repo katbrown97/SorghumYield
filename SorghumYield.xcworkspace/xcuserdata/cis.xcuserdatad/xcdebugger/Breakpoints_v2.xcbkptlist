@@ -21,13 +21,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SorghumYield/PhotoPickerViewController.m"
-            timestampString = "501893803.334863"
+            filePath = "SorghumYield/AdditionalInfoTableViewController.m"
+            timestampString = "501955292.03708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-yieldButtonPress:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -37,13 +37,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SorghumYield/PhotoPickerViewController.m"
-            timestampString = "501895036.064978"
+            filePath = "SorghumYield/FirebaseManager.m"
+            timestampString = "501955615.544964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-yieldButtonPress:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-upLoadFile::"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
