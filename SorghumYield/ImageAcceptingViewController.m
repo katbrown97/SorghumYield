@@ -98,7 +98,6 @@ const static bool animates= NO;
 - (IBAction)dismissImage:(UIButton *)sender {
     [_measurementHolder setMeasurementStatus: DISMISSED];
     [self.navigationController popViewControllerAnimated:animates];
-    
 }
 
 

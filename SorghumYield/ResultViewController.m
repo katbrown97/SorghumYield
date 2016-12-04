@@ -8,6 +8,7 @@
 
 #import "ResultViewController.h"
 #import <CoreData/CoreData.h>
+#import "AdditionalInfoTableViewController.h"
 
 #import "FirebaseManager.h"
 
@@ -49,9 +50,8 @@ static NSString * baseText = @"Seeds per lb";
 -(void) prepareView{
     [self setTitle:@"Yield prediction"];
     
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    self.navigationItem.leftBarButtonItem=nil;
-    self.navigationItem.hidesBackButton=YES;
+    [self disableBackButton];
+    
     
     [_tableView setBackgroundColor:[UIColor clearColor]];
     [_tableView setBackgroundView:nil];
@@ -60,6 +60,13 @@ static NSString * baseText = @"Seeds per lb";
     _submitView.layer.masksToBounds = YES;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"AdditionalInfoSegue"]){
+        AdditionalInfoTableViewController * vc = [segue destinationViewController];
+        [vc setFinalYield:_yieldPerAcreBU];
+    }
+
+}
 -(void) initStaticData{
     [self setAppAreaAverage:[NSNumber numberWithFloat:[[self.managedObject valueForKey:@"appAreaAverage"] floatValue]]];
     [self setGrainsPerPlant:[NSNumber numberWithInt:(int)((113.6 * [_appAreaAverage floatValue]) + 236.38f) ]];
@@ -67,7 +74,7 @@ static NSString * baseText = @"Seeds per lb";
     int headsPerAcreRow = [[self.managedObject valueForKey:@"headsPerThousandth"] intValue];
     NSNumber *  rowsPerAcre = [self.managedObject valueForKey:@"rowSpacing"];
     
-    NSNumber * headsPerAcre = [NSNumber numberWithInt:(43560 * headsPerAcreRow)/(([rowsPerAcre floatValue]/12)*17.5)];
+    NSNumber * headsPerAcre = [NSNumber numberWithInt:(10000 * headsPerAcreRow)];
     
     [self setNumberOfPlantsPerAcre:headsPerAcre];
     [self setNumberOfAcres:[self.managedObject valueForKey:@"numOfAcres"]];

@@ -9,7 +9,7 @@
 #import "PhotoPickerViewController.h"
 #include "ImageAcceptingViewController.h"
 
-//#include "FinalScreenViewController.h"
+
 #import <CoreData/CoreData.h>
 
 @interface PhotoPickerScreenViewController ()
@@ -159,7 +159,8 @@
     {
         ImageAcceptingViewController * vc = [segue destinationViewController];
         [vc setMeasurementHolder:_currentMeasurement];
-    }
+    } 
+    
     [super prepareForSegue:segue sender:sender];
 }
 -(void)updateLabel{

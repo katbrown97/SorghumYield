@@ -14,18 +14,17 @@
     [super viewDidLoad];
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     self.navigationItem.leftBarButtonItem=nil;
-    
     self.navigationItem.hidesBackButton=YES;
+    
     [self setTitle:@"Additional Information"];
     NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
     [formatter setGroupingSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
     [formatter setGroupingSize:3];
     
-    double inBushel = [[_managedObject valueForKey:@"totalYield"] doubleValue];
-    NSString * toSet = [formatter stringFromNumber:[NSNumber numberWithLong:inBushel]];
+    NSString * toSet = [formatter stringFromNumber:_finalYield];
     
-    [[_yieldPredictionCell detailTextLabel] setText:[toSet stringByAppendingString:@" bushels"]];
+    [_finalYieldLabel setText:[toSet stringByAppendingString:@" bushels"]];
     
     
 }

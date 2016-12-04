@@ -187,7 +187,7 @@
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qoy-xu-ETY">
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rowSpace15" translatesAutoresizingMaskIntoConstraints="NO" id="OFF-bG-N0g"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rowSpace30" translatesAutoresizingMaskIntoConstraints="NO" id="OFF-bG-N0g"/>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -215,13 +215,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="xqR-s4-Tg4" secondAttribute="trailing" constant="-16" id="4iX-m9-JxF"/>
                             <constraint firstItem="NrV-Do-UrY" firstAttribute="leading" secondItem="MM9-Yw-8tP" secondAttribute="leadingMargin" id="TgS-n4-47i"/>
                             <constraint firstItem="NrV-Do-UrY" firstAttribute="top" secondItem="NA8-bL-A5w" secondAttribute="bottom" id="YeQ-ed-Xdm"/>
                             <constraint firstItem="eek-I0-WNb" firstAttribute="top" secondItem="xqR-s4-Tg4" secondAttribute="bottom" constant="-1" id="bh7-3Z-Dro"/>
+                            <constraint firstItem="xqR-s4-Tg4" firstAttribute="centerX" secondItem="MM9-Yw-8tP" secondAttribute="centerX" id="cyv-4d-BqV"/>
                             <constraint firstItem="xqR-s4-Tg4" firstAttribute="top" secondItem="NrV-Do-UrY" secondAttribute="bottom" constant="3" id="mm1-Bn-DS4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NrV-Do-UrY" secondAttribute="trailing" id="p37-Wx-nbD"/>
-                            <constraint firstItem="xqR-s4-Tg4" firstAttribute="leading" secondItem="MM9-Yw-8tP" secondAttribute="leadingMargin" constant="-16" id="wAG-L5-amg"/>
+                            <constraint firstItem="xqR-s4-Tg4" firstAttribute="width" secondItem="MM9-Yw-8tP" secondAttribute="width" id="vSH-dN-28Z"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -513,7 +513,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3mM-fD-71Y">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="SFY-um-1ES">
-                                    <rect key="frame" x="0.0" y="64" width="375" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15750" minValue="9000" maxValue="22500" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-hG-6ej">
@@ -669,6 +669,9 @@
                             <outlet property="delegate" destination="MwV-ef-tJ5" id="Ddh-ac-7ot"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="finalYieldLabel" destination="who-wu-qeM" id="6u5-sd-NlW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znf-xz-LJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -800,7 +803,7 @@
         <image name="disabled" width="843" height="123"/>
         <image name="greenButton" width="843" height="123"/>
         <image name="purpleButton" width="843" height="123"/>
-        <image name="rowSpace15" width="1008" height="723"/>
+        <image name="rowSpace30" width="1007" height="723"/>
         <image name="worldmap" width="3100" height="1600"/>
     </resources>
 </document>

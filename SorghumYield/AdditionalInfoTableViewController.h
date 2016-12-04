@@ -13,10 +13,6 @@
 @import CoreLocation;
 
 @interface AdditionalInfoTableViewController : UITableViewController
-
-
-@property (strong) NSManagedObject * managedObject;
-
-@property (strong, nonatomic) IBOutlet UITableViewCell * yieldPredictionCell;
-
+@property (strong) NSNumber * finalYield;
+@property (strong, nonatomic) IBOutlet UILabel *finalYieldLabel;
 @end
