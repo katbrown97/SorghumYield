@@ -25,24 +25,29 @@ using namespace::std;
 @synthesize images;
 
 
-
+/*! @brief This sets the minimum size of the square as percentage of the image. */
 const int minPercentContour = 5;
 
-
-//inpaint
-bool inpaintAllowed= false;
-
-//canny
+/*! @brief This sets threshold for canny algorithm. */
 int thresh = 30;
 
 
-//dilation
+/*! @brief This sets the dilation size for binary point erosion */
 int dilation_size = 3;
 
-//scaling
+/*! @brief This sets how much the original image will be scaled before analysis */
 float imageScale=0.5;
 vector<Vec4i> hierarchy;
 
+/**
+ Calculates angle between three points as taken from https://github.com/opencv/opencv/blob/master/samples/cpp/squares.cpp
+ 
+ @param pt1 point1 as CV::Point
+ @param pt2 point2 as CV::Point
+ @param pt0 point0 as cv::Point
+
+ @return the cosine of angle between the three points as a double
+ */
 static double angle( cv::Point pt1, cv::Point pt2, cv::Point pt0 )
 {
     double dx1 = pt1.x - pt0.x;
@@ -53,6 +58,16 @@ static double angle( cv::Point pt1, cv::Point pt2, cv::Point pt0 )
 }
 //// returns sequence of squares detected on the image.
 //// the sequence is stored in the specified memory storage
+
+/**
+ Returns the largest square found on the image
+
+ @param contours  vector of countours to search in
+ @param square    dataStructure to save the largest square into
+ @param imageSize current image size as scale factor
+
+ @return the area of the largest contour
+ */
 double mySquareFinder(vector< vector<cv::Point> >  & contours, vector<cv::Point> & square, int imageSize){
     
     vector<vector<cv::Point> >::iterator it;
@@ -98,6 +113,13 @@ double mySquareFinder(vector< vector<cv::Point> >  & contours, vector<cv::Point>
     return 0;
 }
 //// the function draws all the squares in the image
+
+/**
+ Draws a square into the specified image, used to highlight found blue square
+
+ @param image  image to draw into
+ @param square square to draw
+ */
 static void drawSquares( Mat& image, const vector<cv::Point>& square )
 {
     const cv::Point* p = &square[0];
@@ -111,15 +133,16 @@ static void drawSquares( Mat& image, const vector<cv::Point>& square )
 
 //-----------------------------------------------------Edge Analysis Algo--------------------------------------------------------
 
-void shadowRemoval(Mat & src){
-    Mat hsvImg;
-    cvtColor(src, hsvImg, CV_BGR2HSV);
-    Mat channel[3];
-    split(hsvImg, channel);
-    src = channel[1];
-}
 
+/**
+ Iterates through all contours provided in first parameter and selects the largest one
 
+ @param contours       Vector of contours
+ @param largestContour Parameter to save largest contour
+ @param imageSize      Current imagesize for scale
+
+ @return Size of the largest contours as double
+ */
 double discardLinesAndFindLargest( vector< vector<cv::Point> >  & contours, vector<cv::Point> & largestContour, int imageSize ){
     
     vector<vector<cv::Point> >::iterator it;
@@ -139,7 +162,7 @@ double discardLinesAndFindLargest( vector< vector<cv::Point> >  & contours, vect
     return largestContourArea;
 }
 
-void Erosion( Mat & canny_output)
+void erosion( Mat & canny_output)
 {
     int dilation_type;
     dilation_type = MORPH_RECT;
@@ -152,7 +175,15 @@ void Erosion( Mat & canny_output)
     dilate( canny_output, canny_output, dilationElement );
 }
 
-Mat Prep(Mat & src ){
+
+/**
+ This function prepares the image for image analysis
+
+ @param src Original image as CV:Mat
+
+ @return A gray scale image prepared for analysis
+ */
+Mat prep(Mat & src ){
     if(src.rows>src.cols){
         cv::Size size(1440,1920);
         resize(src, src, size);
@@ -173,7 +204,14 @@ Mat Prep(Mat & src ){
     
     return src_gray;
 }
-void DrawContoursToImage(Mat & drawing, vector<vector<cv::Point> > & contours){
+
+/**
+ Draws contours to an image
+
+ @param drawing  image to draw into
+ @param contours contours to draw
+ */
+void drawContoursToImage(Mat & drawing, vector<vector<cv::Point> > & contours){
     /// Draw contours
     for( int i = 0; i< contours.size(); i++ )
     {
@@ -182,16 +220,15 @@ void DrawContoursToImage(Mat & drawing, vector<vector<cv::Point> > & contours){
     }
 }
 
+
 - (UIImage * ) analysis: (UIImage *) image : ( NSNumber ** ) result : ( AnalysisResults *) state {
-    
-    
     
     Mat src = [self cvMatFromUIImage:image];
     
     vector<cv::Point>  square;
     vector<vector<cv::Point> > contours;
     
-    Mat src_gray =Prep(src);
+    Mat src_gray =prep(src);
     
     int imageSize = src.rows * src.cols;
     
@@ -201,10 +238,9 @@ void DrawContoursToImage(Mat & drawing, vector<vector<cv::Point> > & contours){
     
     Canny( src_gray, canny_output, thresh, thresh*2, 3 );
     
-    Erosion(canny_output);
+    erosion(canny_output);
     
-    
-    /// Find contours
+
     findContours( canny_output, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE );
     
     double squareSize = mySquareFinder(contours, square,imageSize);
@@ -215,20 +251,27 @@ void DrawContoursToImage(Mat & drawing, vector<vector<cv::Point> > & contours){
     vector <cv::Point> largestContour;
     double biggestContourArea = discardLinesAndFindLargest(contours, largestContour, imageSize);
     
-    
     contours.clear();
     contours.push_back(largestContour);
-    DrawContoursToImage(src, contours);
+    drawContoursToImage(src, contours);
     
     drawSquares(src, square);
     
-    
     *result = [NSNumber numberWithDouble:((biggestContourArea/(src.rows* src.cols)) / squareSize) ];
     
-    return [self UIImageFromCVMat:src];
+    return [self uiImageFromCVMat:src];
 }
 
 //-----------------------------------------------------//Edge Analysis Algo--------------------------------------------------------
+
+/**
+ Converts iOS native UIImage into OpenCV native CV:Mat, taken from opencv tutorial available http://docs.opencv.org/2.4/doc/tutorials/ios/image_manipulation/image_manipulation.html © Copyright 2011-2014, opencv dev team.
+
+
+ @param image The original UIImage
+
+ @return OpenCV Mat
+ */
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image
 {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
@@ -251,7 +294,15 @@ void DrawContoursToImage(Mat & drawing, vector<vector<cv::Point> > & contours){
     
     return cvMat;
 }
--(UIImage *)UIImageFromCVMat:(cv::Mat)cvMat
+
+/**
+ Converts OpenCV CV::Mat into iOS native UIImage taken from opencv tutorial available http://docs.opencv.org/2.4/doc/tutorials/ios/image_manipulation/image_manipulation.html © Copyright 2011-2014, opencv dev team.
+ 
+ @param cvMat The original CV::Mat
+
+ @return UImage representation of Mat
+ */
+-(UIImage *)uiImageFromCVMat:(cv::Mat)cvMat
 {
     NSData *data = [NSData dataWithBytes:cvMat.data length:cvMat.elemSize()*cvMat.total()];
     CGColorSpaceRef colorSpace;

@@ -21,6 +21,17 @@
     return self;
 }
 
+/**
+ Loads lines from files
+
+ @param fileName  Name of the file
+ @param fileType  Type of the file
+ @param directory Directory of the file
+ @param encoding  Encoding used
+ @param delimeter Delimeter used to separate data
+
+ @return <#return value description#>
+ */
 - (NSArray * ) getLinesFromFile:  (NSString *)fileName ofType :(NSString * ) fileType inDirectory :(NSString *) directory encodedWith :(NSStringEncoding) encoding usingDelimeter:(NSString *) delimeter {
     
     NSString* filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
@@ -30,9 +41,10 @@
     
 }
 
+/**
+ Loads all county names from the countryList
+ */
 - (void) countriesFromCSV{
-    
-    
     NSArray * lines = [self getLinesFromFile:@"CountryList" ofType:@"csv" inDirectory:@"" encodedWith:NSASCIIStringEncoding usingDelimeter:@"\n"];
     
     _countryNames= [NSMutableArray array];
@@ -41,6 +53,9 @@
     }
 }
 
+/**
+ Reads the StateCounties file and prepares a dictionary with state names as keys and counties as values
+ */
 - (void) stateCountyDictionaryFromCSV{
     
     NSArray * lines = [self getLinesFromFile:@"StateCounties" ofType:@"csv" inDirectory:@"" encodedWith:kCFStringEncodingUTF8 usingDelimeter:@"\n"];

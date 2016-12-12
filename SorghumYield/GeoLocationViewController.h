@@ -24,7 +24,6 @@ typedef enum PickerStates
 @interface GeoLocationViewController : BaseViewController <CLLocationManagerDelegate,UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property   NSArray * pickerData;
-
 @property   NSInteger selectedState;
 @property   NSInteger selectedCountry;
 @property   NSInteger selectedCounty;

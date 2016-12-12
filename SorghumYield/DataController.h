@@ -29,6 +29,9 @@
     return self;
 }
 
+/**
+ Used to initialze the core data stack
+ */
 - (void)initializeCoreData
 {
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"SorghumYield" withExtension:@"momd"];

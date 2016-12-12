@@ -147,6 +147,10 @@ static NSString * baseText = @"Seeds per lb";
     [alert addAction:noButton];
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+/**
+ Sends a report to firebase database
+ */
 -(void) sendReport{
     
     _ref = [[FIRDatabase database] reference];

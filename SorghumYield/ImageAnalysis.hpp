@@ -15,6 +15,9 @@
 #endif /* ImageAnalysis_hpp */
 
 
+/**
+ This class is reponsible for performing image analysis
+ */
 @interface ImageAnalysis : NSObject
 
 typedef enum AnalysisResults
@@ -25,6 +28,15 @@ typedef enum AnalysisResults
     
 } AnalysisResults;
 
+/**
+ Perform image analysis on the specified UIImage
+
+ @param image       Input image
+ @param result      Parameter that saves the result
+ @param messageBack Currently unused, prepared for future extensions
+
+ @return UIimage modified with squares and sorghum head highlighted
+ */
 - (UIImage * ) analysis: (UIImage *) image : ( NSNumber **) result : ( AnalysisResults *) messageBack ;
 @property (strong,nonatomic) NSMutableArray * images;
 
