@@ -112,7 +112,7 @@
             return [NSString stringWithFormat:@"%@", _rowSpacings[row]];
             break;
         default:
-            return [NSString stringWithFormat:@"%ld", (long)row];
+            return [NSString stringWithFormat:@"%ld", (long)row+1];
             break;
     }
 }
@@ -127,7 +127,7 @@
     [self.managedObject setValue:self.fieldName.text forKey:@"fieldName"];
     [self.managedObject setValue:[NSNumber numberWithInt:[self.numberOfAcres.text intValue]] forKey:@"numOfAcres"];
     [self.managedObject setValue:[NSNumber numberWithFloat:[_rowSpacings[[_rowPicker selectedRowInComponent:0]] floatValue]] forKey:@"rowSpacing"];
-    [self.managedObject setValue:[NSNumber numberWithInt:[_rowPicker selectedRowInComponent:1] ] forKey:@"headsPerThousandth"];
+    [self.managedObject setValue:[NSNumber numberWithInt:([_rowPicker selectedRowInComponent:1]+1) ] forKey:@"headsPerThousandth"];
     
     [self performSegueWithIdentifier:@"fieldDataDone" sender:nil];
 }
