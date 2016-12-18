@@ -9,27 +9,27 @@
 /* Begin PBXBuildFile section */
 		0E6F2758E5743B053E54C51B0D236AF0 /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A25916E89E1170FDBD8154583CE1673 /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1235AC549ED1B1EF40635602DCF8B4D5 /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0CAA0CAD7830CB6E461E4B7A972885 /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B8714DF33ABD898CF49FAA1314DCF34 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD6911525BD9B86C317AB1789ECE8 /* GTMSessionFetcherService.m */; };
 		226B1BFF4E3FC473A1C88F2CFD77C9AF /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ABD2160FC7D3B92A3551FF276A0949B /* GTMDebugThreadValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26BE741AD59EF185570AC9C853F44FAD /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC7840169B50B8759BFCA56717442B4 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3328D6AA0A6DD5371B63ECAD18718F3F /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3217108D46C687089FCBCFB2FB6F8043 /* GoogleToolboxForMac-dummy.m */; };
 		363726394250BA474660FDF167B923B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
 		476D901118FCE3506AF5ECEFC743403B /* GTMDebugSelectorValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = E798A6B1F0B26D2097BCE0E68554CBB9 /* GTMDebugSelectorValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49524DD7C80C2A517F6A1352B67A44E8 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491F659ACE1F91556786FB64CE271C4 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		522C0FE7197A2D7D3D925ADA58429D05 /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C255878643170A6A048CB174CA2C278E /* GTMSessionUploadFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5353CD4CF7B378621E34EA62C699E40F /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE355F55A48A7DA995E11B8863540BA /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5E255A5B5203BE00C7B9E4D2E0D3BDC7 /* GTMMethodCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 25038942C12C849BB931A25C6B1BB4C4 /* GTMMethodCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66C6BF3F708DA86153C829B78B3DA77A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
 		6C262944569C29D04DFA3C5F21494AAB /* GTMNSDictionary+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D16F2258EBB43A6D0D092463099E93 /* GTMNSDictionary+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9417B872ADCACCC4CFED22B51F5E05E0 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60D4D2D7A61B805C26F55D65D36704 /* GTMSessionFetcher.m */; };
-		9931FBF0D5CD16A87511F3EBD2302A5B /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 702808EAA3C8EC7F32BF1534592ADC24 /* GTMSessionFetcher-dummy.m */; };
-		9EC3208101C0A4CE8E374B61F787355B /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE355F55A48A7DA995E11B8863540BA /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		74B88A8B5B43AE22CE208F1AF9315336 /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 702808EAA3C8EC7F32BF1534592ADC24 /* GTMSessionFetcher-dummy.m */; };
+		9B3794E275C6348A291A1E0A52CAF113 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FD60D4D2D7A61B805C26F55D65D36704 /* GTMSessionFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9BB31E94CF2D3BEB22EEC2E0D2147C64 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD6911525BD9B86C317AB1789ECE8 /* GTMSessionFetcherService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A46AF96BFE3E00583C3C2AB6C1322D7B /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F9488ECBE35E1C43F9ACD30504B1B224 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACBF3E2E9A6B3E9FD859BF001F20D694 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491F659ACE1F91556786FB64CE271C4 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B4B084A9C602985BE7858EA801AD4382 /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = D6304223E2EC444C0D20CC518D6267BA /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5378C9B36CBB0F07490F0038B4ED5F5 /* Pods-SorghumYield-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E479AAF36D8A3D78D8451F960ADF7875 /* Pods-SorghumYield-dummy.m */; };
-		CF7E7B439D17C5FF57B2DBC7C03E10EF /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27B614DFE90B74BA28FA3125D60CE4 /* GTMSessionFetcherLogging.m */; };
-		E43766C39792FE24EFAF9291C5579176 /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C255878643170A6A048CB174CA2C278E /* GTMSessionUploadFetcher.m */; };
+		CDA0F61C3BD605E63D0500A1A0574969 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F27B614DFE90B74BA28FA3125D60CE4 /* GTMSessionFetcherLogging.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E071ED04676790AFF262727DB6BC5DE1 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BAA1C9FF87A36C934518243D5B6851 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E84DEF53F8F01BAF747EB387654EC0AC /* GTMNSString+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DD74BDB79F229C4ECC2A48677661388 /* GTMNSString+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E982A741CDD1A8CC804FC7F20E5C006F /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 389DE6A1965DA44A4B4F7A915A8EC32C /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF7722D72FCA3A27E05EC9D4A716D5FD /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BAA1C9FF87A36C934518243D5B6851 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F3E77AA87F046EA6488343E942699FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4690263E3C2DD3C24DEAC554FFBD486 /* Foundation.framework */; };
 		FDA904E57877210782AFC6E37383A93C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFD15069DBFFAF7E7CD48183E2D230C /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -558,7 +558,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4693C211CA1C7318A8B388F1C2D24725 /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */;
 			buildPhases = (
-				34191111C8E6A7E0C8B7499BA636A66A /* Sources */,
+				474FE5FB84FE06E59DA34EFCEB7B07B2 /* Sources */,
 				8D2BE8CE5663DF1EA1CF1CC5269C6067 /* Frameworks */,
 				A922FE66E6DEA4BD3090DCEB4580F34E /* Headers */,
 			);
@@ -608,15 +608,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34191111C8E6A7E0C8B7499BA636A66A /* Sources */ = {
+		474FE5FB84FE06E59DA34EFCEB7B07B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9931FBF0D5CD16A87511F3EBD2302A5B /* GTMSessionFetcher-dummy.m in Sources */,
-				9417B872ADCACCC4CFED22B51F5E05E0 /* GTMSessionFetcher.m in Sources */,
-				CF7E7B439D17C5FF57B2DBC7C03E10EF /* GTMSessionFetcherLogging.m in Sources */,
-				1B8714DF33ABD898CF49FAA1314DCF34 /* GTMSessionFetcherService.m in Sources */,
-				E43766C39792FE24EFAF9291C5579176 /* GTMSessionUploadFetcher.m in Sources */,
+				74B88A8B5B43AE22CE208F1AF9315336 /* GTMSessionFetcher-dummy.m in Sources */,
+				9B3794E275C6348A291A1E0A52CAF113 /* GTMSessionFetcher.m in Sources */,
+				CDA0F61C3BD605E63D0500A1A0574969 /* GTMSessionFetcherLogging.m in Sources */,
+				9BB31E94CF2D3BEB22EEC2E0D2147C64 /* GTMSessionFetcherService.m in Sources */,
+				522C0FE7197A2D7D3D925ADA58429D05 /* GTMSessionUploadFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,9 +625,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3328D6AA0A6DD5371B63ECAD18718F3F /* GoogleToolboxForMac-dummy.m in Sources */,
-				EF7722D72FCA3A27E05EC9D4A716D5FD /* GTMNSData+zlib.m in Sources */,
-				9EC3208101C0A4CE8E374B61F787355B /* GTMNSDictionary+URLArguments.m in Sources */,
-				49524DD7C80C2A517F6A1352B67A44E8 /* GTMNSString+URLArguments.m in Sources */,
+				E071ED04676790AFF262727DB6BC5DE1 /* GTMNSData+zlib.m in Sources */,
+				5353CD4CF7B378621E34EA62C699E40F /* GTMNSDictionary+URLArguments.m in Sources */,
+				ACBF3E2E9A6B3E9FD859BF001F20D694 /* GTMNSString+URLArguments.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
