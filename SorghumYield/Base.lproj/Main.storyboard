@@ -221,7 +221,7 @@
                             <constraint firstItem="xqR-s4-Tg4" firstAttribute="centerX" secondItem="MM9-Yw-8tP" secondAttribute="centerX" id="cyv-4d-BqV"/>
                             <constraint firstItem="xqR-s4-Tg4" firstAttribute="top" secondItem="NrV-Do-UrY" secondAttribute="bottom" constant="3" id="mm1-Bn-DS4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NrV-Do-UrY" secondAttribute="trailing" id="p37-Wx-nbD"/>
-                            <constraint firstItem="xqR-s4-Tg4" firstAttribute="width" secondItem="MM9-Yw-8tP" secondAttribute="width" id="vSH-dN-28Z"/>
+                            <constraint firstItem="xqR-s4-Tg4" firstAttribute="width" secondItem="MM9-Yw-8tP" secondAttribute="width" constant="5" id="vSH-dN-28Z"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -282,12 +282,17 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="dxv-1C-Ycc"/>
+                                                    <constraint firstAttribute="height" constant="50" id="WVS-mZ-fEG"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="uW6-TW-R8C" firstAttribute="width" secondItem="JhM-Ra-o1K" secondAttribute="width" id="DMa-Ki-9HU"/>
+                                    <constraint firstItem="uW6-TW-R8C" firstAttribute="top" secondItem="eXe-ab-grd" secondAttribute="bottom" id="nrk-Lv-WuG"/>
+                                    <constraint firstAttribute="bottom" secondItem="uW6-TW-R8C" secondAttribute="bottom" id="tHx-LM-bgC"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -457,10 +462,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="96V-YB-MeF" firstAttribute="leading" secondItem="zs2-88-aKH" secondAttribute="leadingMargin" constant="15" id="4Fg-HG-4jW"/>
-                            <constraint firstItem="9O0-FK-Xqy" firstAttribute="leading" secondItem="zs2-88-aKH" secondAttribute="leadingMargin" constant="-16" id="9zi-c2-RvV"/>
+                            <constraint firstItem="9O0-FK-Xqy" firstAttribute="centerX" secondItem="zs2-88-aKH" secondAttribute="centerX" id="5To-wu-kEj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="96V-YB-MeF" secondAttribute="trailing" constant="15" id="JvV-NG-j3p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i3Z-lg-4ke" secondAttribute="trailing" id="KZC-0X-cBT"/>
                             <constraint firstItem="i3Z-lg-4ke" firstAttribute="top" secondItem="VcH-rs-1FN" secondAttribute="bottom" id="Okt-HO-Ffi"/>
+                            <constraint firstItem="9O0-FK-Xqy" firstAttribute="width" secondItem="zs2-88-aKH" secondAttribute="width" constant="5" id="bus-mF-2mP"/>
                             <constraint firstItem="z9c-xS-UMp" firstAttribute="top" secondItem="9O0-FK-Xqy" secondAttribute="bottom" constant="-1" id="dUM-ba-5gn"/>
                             <constraint firstItem="9O0-FK-Xqy" firstAttribute="top" secondItem="i3Z-lg-4ke" secondAttribute="bottom" id="eMu-8P-gHn"/>
                             <constraint firstItem="VcH-rs-1FN" firstAttribute="top" secondItem="96V-YB-MeF" secondAttribute="bottom" constant="50" id="f5N-sk-bzQ"/>
@@ -468,7 +474,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VcH-rs-1FN" secondAttribute="trailing" id="he6-oS-fwF"/>
                             <constraint firstItem="VcH-rs-1FN" firstAttribute="leading" secondItem="zs2-88-aKH" secondAttribute="leadingMargin" id="jLS-KY-GFy"/>
                             <constraint firstItem="96V-YB-MeF" firstAttribute="top" secondItem="4zJ-Js-x28" secondAttribute="bottom" constant="15" id="sBL-2t-2qy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9O0-FK-Xqy" secondAttribute="trailing" constant="-16" id="xgJ-AL-wZA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MiN-0Z-hq6"/>
@@ -543,9 +548,9 @@
                             <constraint firstItem="8Gf-cw-P06" firstAttribute="top" secondItem="Jk0-RM-iei" secondAttribute="bottom" constant="-2" id="6q9-WA-JQb"/>
                             <constraint firstAttribute="trailing" secondItem="3mM-fD-71Y" secondAttribute="trailing" id="LJ1-La-Pow"/>
                             <constraint firstItem="3mM-fD-71Y" firstAttribute="leading" secondItem="rAX-5B-2Di" secondAttribute="leading" id="LtS-wC-STa"/>
+                            <constraint firstItem="Jk0-RM-iei" firstAttribute="width" secondItem="rAX-5B-2Di" secondAttribute="width" constant="5" id="a2N-Y8-nph"/>
                             <constraint firstItem="3mM-fD-71Y" firstAttribute="top" secondItem="MhQ-bq-xZ9" secondAttribute="bottom" id="fQD-Rj-saY"/>
-                            <constraint firstAttribute="trailing" secondItem="Jk0-RM-iei" secondAttribute="trailing" constant="-2" id="u0t-F7-fFf"/>
-                            <constraint firstItem="Jk0-RM-iei" firstAttribute="leading" secondItem="rAX-5B-2Di" secondAttribute="leading" constant="-2" id="w9p-U7-d85"/>
+                            <constraint firstItem="Jk0-RM-iei" firstAttribute="centerX" secondItem="rAX-5B-2Di" secondAttribute="centerX" id="mD7-QI-HOT"/>
                         </constraints>
                     </view>
                     <connections>
