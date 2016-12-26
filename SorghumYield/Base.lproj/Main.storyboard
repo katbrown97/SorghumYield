@@ -29,24 +29,14 @@
                                     <segue destination="f5v-iT-DqK" kind="show" id="ibw-dW-7Fi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVI-LA-SzK">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="MID-dM-uv3"/>
-                                </constraints>
-                                <state key="normal" title="ABOUT" backgroundImage="greenButton"/>
-                                <state key="disabled" backgroundImage="disabled"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="yjG-tB-j5I"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yjG-tB-j5I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5FG-FT-SZ9"/>
-                            <constraint firstItem="eVI-LA-SzK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="8LP-WE-rNs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eVI-LA-SzK" secondAttribute="trailing" constant="15" id="OsZ-1r-dP4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wmu-vg-ZM4" secondAttribute="bottom" constant="25" id="JZM-fP-VEL"/>
                             <constraint firstItem="yjG-tB-j5I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Yto-Bm-lBD"/>
-                            <constraint firstItem="eVI-LA-SzK" firstAttribute="top" secondItem="wmu-vg-ZM4" secondAttribute="bottom" id="dNT-DC-IIY"/>
                             <constraint firstItem="wmu-vg-ZM4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="dYA-x7-rIw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eVI-LA-SzK" secondAttribute="bottom" constant="25" id="eAa-pr-URg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wmu-vg-ZM4" secondAttribute="trailing" constant="15" id="kHe-n3-uri"/>
                             <constraint firstItem="wmu-vg-ZM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mRM-Yr-uuf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yjG-tB-j5I" secondAttribute="trailing" constant="15" id="wun-s4-HAy"/>
@@ -282,7 +272,7 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="WVS-mZ-fEG"/>
+                                                    <constraint firstAttribute="height" constant="50" id="6WR-aH-p9C"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -607,7 +597,7 @@
                             <tableViewSection headerTitle="Additional Info" id="FCQ-eC-1ac">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="1tH-KL-uWH" style="IBUITableViewCellStyleDefault" id="7zK-9e-4og">
-                                        <rect key="frame" x="0.0" y="221" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zK-9e-4og" id="PQ0-bk-JTC">
                                             <frame key="frameInset" width="342" height="43"/>
@@ -624,7 +614,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="G4n-hk-FDL" style="IBUITableViewCellStyleDefault" id="tnP-ME-lYk">
-                                        <rect key="frame" x="0.0" y="265" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tnP-ME-lYk" id="FRi-QD-z38">
                                             <frame key="frameInset" width="342" height="43"/>
@@ -645,7 +635,7 @@
                             <tableViewSection id="vOm-Aa-Xc0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="Z2y-Sl-ilD">
-                                        <rect key="frame" x="0.0" y="345" width="375" height="95"/>
+                                        <rect key="frame" x="0.0" y="344" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z2y-Sl-ilD" id="FXM-2m-ymw">
                                             <frame key="frameInset" width="375" height="94"/>
