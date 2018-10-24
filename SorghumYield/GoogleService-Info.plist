@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>586478260920-rfur5hq07vieqotf4oj6ov906u09t1m8.apps.googleusercontent.com</string>
+	<string>702370054240-7d3ckklh74qfbtmqgiapqk46h4j8us6c.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.586478260920-rfur5hq07vieqotf4oj6ov906u09t1m8</string>
+	<string>com.googleusercontent.apps.702370054240-7d3ckklh74qfbtmqgiapqk46h4j8us6c</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDTc38b355RqNeknfv_Oy5kmuovanNP0vE</string>
+	<string>AIzaSyBterjGRL06eXgOtqERvLydbdC9gANuF4Q</string>
 	<key>GCM_SENDER_ID</key>
-	<string>586478260920</string>
+	<string>702370054240</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>bap.SorghumYield</string>
 	<key>PROJECT_ID</key>
-	<string>sorghumthesis</string>
+	<string>extension-database-81ebc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>sorghumthesis.appspot.com</string>
+	<string>extension-database-81ebc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:586478260920:ios:9d1c98410df49ded</string>
+	<string>1:702370054240:ios:9d1c98410df49ded</string>
 	<key>DATABASE_URL</key>
-	<string>https://sorghumthesis.firebaseio.com</string>
+	<string>https://extension-database-81ebc.firebaseio.com</string>
 </dict>
 </plist>
