@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 @import Firebase;
+#import "FUIAuth.h"
 
 /**
  Class responsible for controlling firebase connections

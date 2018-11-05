@@ -10,7 +10,6 @@
 
 @implementation FirebaseManager
 
-
 #pragma mark Singleton Methods
 
 + (id)sharedFirebaseManager {
@@ -30,7 +29,7 @@
 }
 -(void)setupDatabase{
     [FIRApp configure];
-    //[[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
+    FUIAuth *authUI = [FUIAuth defaultAuthUI];
     [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRAuthDataResult *dataResult, NSError *error) {
          if(error != nil){
          }

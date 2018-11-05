@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC6E5532579D2EC72311C4B3B7B3710E"
+               BlueprintIdentifier = "0E980B57FC17A0B9936C20F8BCE2F572"
                BlueprintName = "Pods-SorghumYield"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-SorghumYield.a">
