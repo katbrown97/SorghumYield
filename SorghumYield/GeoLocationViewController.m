@@ -17,14 +17,20 @@
     
 }
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     [self disableBackButton];
     
+    NSManagedObject * autoGPSCoordinates =[self.managedObject valueForKey:@"autoGPSData"];
+    if(autoGPSCoordinates != nil){
+       [self performSegueWithIdentifier:@"GeoSegue" sender:self];
+    }
+    
     _locationManager = [[CLLocationManager alloc] init];
     CLAuthorizationStatus currentStatus =  [CLLocationManager authorizationStatus];
+    
+    
     
     if(currentStatus == kCLAuthorizationStatusRestricted ||  currentStatus ==kCLAuthorizationStatusDenied || [CLLocationManager locationServicesEnabled]== false){
         [self initializePicker];
@@ -36,7 +42,6 @@
         _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
         _locationManager.distanceFilter = 100.0;
         [_locationManager requestLocation];
-        
         
         _indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         _indicator.center = self.view.center;
@@ -89,10 +94,10 @@ static dispatch_once_t predicate;
     CLLocationCoordinate2D currentCoordinates = locations[0].coordinate;
     
     [_locationManager stopUpdatingLocation];
-    manager = nil;
     
     dispatch_once(&predicate, ^{
         [self storeAutoLocationAndSegue:currentCoordinates];
+        
     });
 }
 
