@@ -44,4 +44,13 @@
     }
 
 }
+
+// Home button action
+- (IBAction)HomeButton:(UIButton *)sender {
+    //[self presentViewController:IntroViewController animated:YES completion:nil];
+    //[self presentViewController:[[IntroViewController alloc] init] animated:YES completion:nil];
+    [[self navigationController] popToRootViewControllerAnimated:true];
+//    UIViewController *ivc = [self.storyboard instantiateViewControllerWithIdentifier:@"IVC"];
+//    [self.navigationController pushViewController:ivc animated:true];
+}
 @end

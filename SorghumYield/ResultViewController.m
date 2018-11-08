@@ -14,6 +14,11 @@
 
 static NSString * baseText = @"Seeds per lb";
 
+// Create reference to firestore
+@interface ResultViewController ()
+@property (nonatomic, readwrite) FIRFirestore *db;
+@end
+
 @implementation ResultViewController
 {
     
@@ -46,6 +51,7 @@ static NSString * baseText = @"Seeds per lb";
     
     [self prepareView];
     
+    self.db = [FIRFirestore firestore];
 }
 -(void) prepareView{
     [self setTitle:@"Yield prediction"];
@@ -149,11 +155,66 @@ static NSString * baseText = @"Seeds per lb";
 }
 
 /**
- Sends a report to firebase database
+ Sends a report to firebase cloud firestore database
  */
 -(void) sendReport{
     
-    _ref = [[FIRDatabase database] reference];
+    // Declare & get location
+    NSManagedObject * autoGPSCoordinates =[self.managedObject valueForKey:@"autoGPSData"];
+    NSManagedObject * manualGPSCoordinates =[self.managedObject valueForKey:@"manualGPSData"];
+    NSNumber * lat=[NSNumber numberWithInt:0];
+    NSNumber * lon=[NSNumber numberWithInt:0];
+    NSString * countryName=@"";
+    NSString * stateName=@"";
+    NSString * countyName=@"";
+    
+    if( autoGPSCoordinates!=nil){
+        lat =[autoGPSCoordinates valueForKey:@"lat"];
+        lon =[autoGPSCoordinates valueForKey:@"lon"];
+    }
+    else{
+        countryName= [manualGPSCoordinates valueForKey:@"countryName"];
+        stateName = [manualGPSCoordinates valueForKey:@"stateName"];
+        countyName = [manualGPSCoordinates valueForKey:@"countyName"];
+    }
+    
+    // Add data to database
+    __block FIRDocumentReference *ref =
+    [[self.db collectionWithPath:@"reportsTest"] addDocumentWithData:@{
+         @"appID": @"sorghumYield",
+         @"owner": @"Kat",
+         @"fieldName":        [self.managedObject valueForKey:@"fieldName"],
+         
+         @"numAcres":       [self.managedObject valueForKey:@"numOfAcres"],
+         
+         @"numberOfHeadsPerThousandth": [self.managedObject valueForKey:@"headsPerThousandth"],
+         @"rowSpacing":       [self.managedObject valueForKey:@"rowSpacing"],
+         @"AutoGPS":          @{
+                 @"lat":      lat,
+                 @"lon":      lon
+                 },
+         @"ManualGPS":          @{
+                 @"country":      countryName,
+                 @"state":      stateName,
+                 @"county":      countyName
+                 },
+         @"appAreaAverage":   [_appAreaAverage stringValue],
+         @"seedsPerPound":    [_seedsPerPound stringValue],
+         @"grainCount":       [_grainsPerPlant stringValue],
+         @"yieldPerAcre":   [_yieldPerAcre stringValue],
+         @"totalYield":   [_totalYield stringValue]
+         } completion:^(NSError * _Nullable error) {
+             if (error != nil) {
+                 NSLog(@"Error adding document: %@", error);
+             } else {
+                 NSLog(@"Document added with ID: %@", ref.documentID);
+             }
+         }];
+    [self performSegueWithIdentifier:@"AdditionalInfoSegue" sender:self];
+}
+
+// Realtime database
+    /*_ref = [[FIRDatabase database] reference];
     FIRDatabaseReference * measurementRef = [[_ref child:@"measurements"] childByAutoId];
     
     NSManagedObject * autoGPSCoordinates =[self.managedObject valueForKey:@"autoGPSData"];
@@ -203,7 +264,7 @@ static NSString * baseText = @"Seeds per lb";
     
     [self performSegueWithIdentifier:@"AdditionalInfoSegue" sender:self];
     
-}
+} */
 
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

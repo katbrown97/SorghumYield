@@ -10,7 +10,6 @@
 
 @implementation FirebaseManager
 
-
 #pragma mark Singleton Methods
 
 + (id)sharedFirebaseManager {
@@ -30,7 +29,8 @@
 }
 -(void)setupDatabase{
     [FIRApp configure];
-    [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
+    FUIAuth *authUI = [FUIAuth defaultAuthUI];
+    [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRAuthDataResult *dataResult, NSError *error) {
          if(error != nil){
          }
      }];
@@ -65,9 +65,14 @@
     
     FIRStorage *storage = [FIRStorage storage];
     
-    // Create a storage reference from our storage service
-    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://sorghumthesis.appspot.com"];
+    // NEW
+    FIRFirestore *defaultFirestore = [FIRFirestore firestore];
     
+    // Create a storage reference from our storage service
+    
+    // --------------- Old firebase link below ----------------
+    //FIRStorageReference *storageRef = [storage referenceForURL:@"gs://sorghumthesis.appspot.com"];
+    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://extension-database-81ebc.appspot.com"];
     
     NSString * measurementRefKey =[measurementRef key];
     
