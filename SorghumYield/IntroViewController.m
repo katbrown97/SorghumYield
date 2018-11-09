@@ -7,6 +7,8 @@
 //
 
 #import "IntroViewController.h"
+#import "FirebaseUI.h"
+#import "FUIAuthProvider.h"
 
 
 @interface IntroViewController ()
@@ -15,9 +17,19 @@
 
 @implementation IntroViewController
 
+FIRAuth *auth;
+FUIAuth *authUI;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self disableBackButton];
+    
+    auth = [FIRAuth auth];
+    authUI = [FUIAuth defaultAuthUI];
+    authUI.delegate = self;
+    // Objective-C
+    UINavigationController *authViewController = [authUI authViewController];
+    [self presentViewController:authViewController animated:true completion:Nil];
 }
 
 
