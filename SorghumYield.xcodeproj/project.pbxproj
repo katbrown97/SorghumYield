@@ -600,6 +600,17 @@
 				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
 				DEVELOPMENT_TEAM = T7LK993P2F;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSignIn/Frameworks\"",
+					"\"${PODS_ROOT}/OpenCV\"",
+					"\"${PODS_ROOT}/TwitterCore/iOS\"",
+					"\"${PODS_ROOT}/TwitterKit/iOS\"",
+					"\"${PODS_ROOT}",
+				);
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield1;
@@ -619,6 +630,17 @@
 				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
 				DEVELOPMENT_TEAM = T7LK993P2F;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSignIn/Frameworks\"",
+					"\"${PODS_ROOT}/OpenCV\"",
+					"\"${PODS_ROOT}/TwitterCore/iOS\"",
+					"\"${PODS_ROOT}/TwitterKit/iOS\"",
+					"\"${PODS_ROOT}",
+				);
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield1;
