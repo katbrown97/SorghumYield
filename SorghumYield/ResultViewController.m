@@ -182,7 +182,7 @@ static NSString * baseText = @"Seeds per lb";
     __block FIRDocumentReference *ref =
     [[self.db collectionWithPath:@"reportsTest"] addDocumentWithData:@{
          @"appID": @"sorghumYield",
-         @"owner": @"Kat",
+         @"owner": [FIRAuth auth].currentUser.uid,
          @"fieldName":        [self.managedObject valueForKey:@"fieldName"],
          
          @"numAcres":       [self.managedObject valueForKey:@"numOfAcres"],
