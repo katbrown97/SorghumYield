@@ -7,8 +7,36 @@
 //
 
 #import "AdditionalInfoTableViewController.h"
+#import "IntroViewController.h"
 
 @implementation AdditionalInfoTableViewController
+
+- (IBAction)logout:(id)sender {
+    [self signOut];
+}
+
+- (void)signOut {
+    NSError *error;
+    IntroViewController *class1 = [[IntroViewController alloc] init];
+    FUIAuth *authUI2 = class1.authUI;
+    [authUI2 signOutWithError:&error];
+    if (error) {
+        [self showAlertWithTitlte:@"Error" message:error.localizedDescription];
+    }
+}
+
+- (void)showAlertWithTitlte:(NSString *)title message:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* closeButton = [UIAlertAction
+                                  actionWithTitle:@"Close"
+                                  style:UIAlertActionStyleDefault
+                                  handler:nil];
+    [alert addAction:closeButton];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -47,10 +75,6 @@
 
 // Home button action
 - (IBAction)HomeButton:(UIButton *)sender {
-    //[self presentViewController:IntroViewController animated:YES completion:nil];
-    //[self presentViewController:[[IntroViewController alloc] init] animated:YES completion:nil];
     [[self navigationController] popToRootViewControllerAnimated:true];
-//    UIViewController *ivc = [self.storyboard instantiateViewControllerWithIdentifier:@"IVC"];
-//    [self.navigationController pushViewController:ivc animated:true];
 }
 @end

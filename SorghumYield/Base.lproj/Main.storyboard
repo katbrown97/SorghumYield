@@ -22,33 +22,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmu-vg-ZM4">
-                                <rect key="frame" x="31" y="592" width="313" height="50"/>
+                                <rect key="frame" x="31" y="551" width="313" height="50"/>
+                                <accessibility key="accessibilityConfiguration" identifier="getStartedButton" label="getStartedButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jru-yG-5rH"/>
                                 </constraints>
                                 <state key="normal" title="GET STARTED" backgroundImage="purpleButton"/>
                                 <state key="disabled" backgroundImage="disabled"/>
                                 <connections>
-                                    <segue destination="f5v-iT-DqK" kind="show" id="ibw-dW-7Fi"/>
+                                    <segue destination="f5v-iT-DqK" kind="show" id="ylR-zM-yYg"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="yjG-tB-j5I">
-                                <rect key="frame" x="31" y="72" width="313" height="520"/>
+                                <rect key="frame" x="31" y="72" width="313" height="459"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-O7-z50">
+                                <rect key="frame" x="31" y="608" width="313" height="50"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HT0-LC-QOH"/>
+                                    <constraint firstAttribute="width" constant="313" id="WZM-4j-kJl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="hY0-Tn-rNz"/>
+                                    <constraint firstAttribute="width" secondItem="DOV-O7-z50" secondAttribute="height" multiplier="313:50" id="zK4-7z-Aod"/>
+                                </constraints>
+                                <state key="normal" title="Login" backgroundImage="purpleButton"/>
+                                <state key="disabled" backgroundImage="disabled"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchDown" id="Nrc-tU-iU4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yjG-tB-j5I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5FG-FT-SZ9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wmu-vg-ZM4" secondAttribute="bottom" constant="25" id="JZM-fP-VEL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DOV-O7-z50" secondAttribute="trailing" constant="15" id="Tqs-aq-UWh"/>
+                            <constraint firstItem="DOV-O7-z50" firstAttribute="top" secondItem="wmu-vg-ZM4" secondAttribute="bottom" constant="7" id="Wdq-24-Tb1"/>
                             <constraint firstItem="yjG-tB-j5I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Yto-Bm-lBD"/>
-                            <constraint firstItem="wmu-vg-ZM4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="dYA-x7-rIw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wmu-vg-ZM4" secondAttribute="trailing" constant="15" id="ZZx-SI-ne5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DOV-O7-z50" secondAttribute="bottom" constant="9" id="drW-zF-ADH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wmu-vg-ZM4" secondAttribute="trailing" constant="15" id="kHe-n3-uri"/>
                             <constraint firstItem="wmu-vg-ZM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mRM-Yr-uuf"/>
+                            <constraint firstItem="wmu-vg-ZM4" firstAttribute="top" secondItem="yjG-tB-j5I" secondAttribute="bottom" constant="20" id="nHx-s5-mLO"/>
+                            <constraint firstItem="DOV-O7-z50" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="seK-QR-7nO"/>
+                            <constraint firstItem="DOV-O7-z50" firstAttribute="top" secondItem="wmu-vg-ZM4" secondAttribute="bottom" constant="7" id="t57-AR-Qky"/>
+                            <constraint firstItem="wmu-vg-ZM4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="vtt-mq-Vpv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yjG-tB-j5I" secondAttribute="trailing" constant="15" id="wun-s4-HAy"/>
-                            <constraint firstItem="wmu-vg-ZM4" firstAttribute="top" secondItem="yjG-tB-j5I" secondAttribute="bottom" id="xe2-eH-shZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a5A-Np-you"/>
+                    <connections>
+                        <outlet property="BtnGetStarted" destination="wmu-vg-ZM4" id="dJz-uT-w0k"/>
+                        <outlet property="BtnLogin" destination="DOV-O7-z50" id="92N-Lq-NUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -730,6 +755,10 @@
                             <outlet property="delegate" destination="MwV-ef-tJ5" id="Ddh-ac-7ot"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="QnJ-wP-SxS"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="finalYieldLabel" destination="who-wu-qeM" id="6u5-sd-NlW"/>
                     </connections>
