@@ -178,15 +178,13 @@ static NSString * baseText = @"Seeds per lb";
         countyName = [manualGPSCoordinates valueForKey:@"countyName"];
     }
     
-    // Add data to database
+    // Add report data to database
     __block FIRDocumentReference *ref =
-    [[self.db collectionWithPath:@"reportsTest"] addDocumentWithData:@{
+    [[self.db collectionWithPath:@"reports"] addDocumentWithData:@{
          @"appID": @"sorghumYield",
          @"owner": [FIRAuth auth].currentUser.uid,
-         @"fieldName":        [self.managedObject valueForKey:@"fieldName"],
-         
+         @"fieldName":      [self.managedObject valueForKey:@"fieldName"],
          @"numAcres":       [self.managedObject valueForKey:@"numOfAcres"],
-         
          @"numberOfHeadsPerThousandth": [self.managedObject valueForKey:@"headsPerThousandth"],
          @"rowSpacing":       [self.managedObject valueForKey:@"rowSpacing"],
          @"AutoGPS":          @{
@@ -210,62 +208,28 @@ static NSString * baseText = @"Seeds per lb";
                  NSLog(@"Document added with ID: %@", ref.documentID);
              }
          }];
+    
+    // Update report field within user document
+    NSString *UID = [FIRAuth auth].currentUser.uid;
+    
+    //Creates a user document if one doesn't exist with this uid
+    FIRDocumentReference *ref2 =
+    [[self.db collectionWithPath:@"users"] documentWithPath:UID];
+
+    [ref2 setData:@{
+       @"email": [FIRAuth auth].currentUser.email
+    }];
+    
+    // Atomically add a new report to the "reports" array field.
+    [ref2 updateData:@{
+       @"reports": [FIRFieldValue fieldValueForArrayUnion:@[ref.documentID]]
+    }];
+    
+    // -------- Images? --------
+    // [[FirebaseManager sharedFirebaseManager] storeImages:measurementRef :self.managedObject];
+    
     [self performSegueWithIdentifier:@"AdditionalInfoSegue" sender:self];
 }
-
-// Realtime database
-    /*_ref = [[FIRDatabase database] reference];
-    FIRDatabaseReference * measurementRef = [[_ref child:@"measurements"] childByAutoId];
-    
-    NSManagedObject * autoGPSCoordinates =[self.managedObject valueForKey:@"autoGPSData"];
-    NSManagedObject * manualGPSCoordinates =[self.managedObject valueForKey:@"manualGPSData"];
-    NSNumber * lat=[NSNumber numberWithInt:0];
-    NSNumber * lon=[NSNumber numberWithInt:0];
-    NSString * countryName=@"";
-    NSString * stateName=@"";
-    NSString * countyName=@"";
-    
-    if( autoGPSCoordinates!=nil){
-        lat =[autoGPSCoordinates valueForKey:@"lat"];
-        lon =[autoGPSCoordinates valueForKey:@"lon"];
-    }
-    else{
-        countryName= [manualGPSCoordinates valueForKey:@"countryName"];
-        stateName = [manualGPSCoordinates valueForKey:@"stateName"];
-        countyName = [manualGPSCoordinates valueForKey:@"countyName"];
-    }
-    [measurementRef setValue:@{
-                               @"fieldName":        [self.managedObject valueForKey:@"fieldName"],
-                               
-                               @"numOfAcres":       [self.managedObject valueForKey:@"numOfAcres"],
-                               
-                               @"numberOfHeadsPerThousandth": [self.managedObject valueForKey:@"headsPerThousandth"],
-                               @"rowSpacing":       [self.managedObject valueForKey:@"rowSpacing"],
-                               
-                               
-                               @"AutoGPS":          @{
-                                       @"lat":      lat,
-                                       @"lon":      lon
-                                       },
-                               @"ManualGPS":          @{
-                                       @"country":      countryName,
-                                       @"state":      stateName,
-                                       @"county":      countyName
-                                       },
-                               
-                               @"appAreaAverage":   [_appAreaAverage stringValue],
-                               @"seedsPerPound":    [_seedsPerPound stringValue],
-                               @"grainCount":       [_grainsPerPlant stringValue],
-                               @"yieldPerAcre":   [_yieldPerAcre stringValue],
-                               @"totalYield":   [_totalYield stringValue]
-                               }
-     ];
-    [[FirebaseManager sharedFirebaseManager] storeImages:measurementRef :self.managedObject];
-    
-    [self performSegueWithIdentifier:@"AdditionalInfoSegue" sender:self];
-    
-} */
-
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
