@@ -64,14 +64,11 @@
     FIRDatabaseReference * photoMeasurementRef = [measurementRef child:@"photoMeasurements"];
     
     FIRStorage *storage = [FIRStorage storage];
-    
-    // NEW
+
+    // Create a storage reference from our storage service
     FIRFirestore *defaultFirestore = [FIRFirestore firestore];
     
-    // Create a storage reference from our storage service
-    
-    // --------------- Old firebase link below ----------------
-    //FIRStorageReference *storageRef = [storage referenceForURL:@"gs://sorghumthesis.appspot.com"];
+    // Connect to extension platform firestore
     FIRStorageReference *storageRef = [storage referenceForURL:@"gs://extension-database-81ebc.appspot.com"];
     
     NSString * measurementRefKey =[measurementRef key];
