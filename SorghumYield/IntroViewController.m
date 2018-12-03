@@ -24,17 +24,17 @@ FUIAuth *authUI;
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+// Button for login
 - (IBAction)login:(id)sender {
+    // Check if user's login
     if(!auth.currentUser){
         auth = [FIRAuth auth];
-        FUIAuth.defaultAuthUI.shouldHideCancelButton = true;
+        FUIAuth.defaultAuthUI.shouldHideCancelButton = true; // Disable back button on FirebaseUI sign in page
         authUI = [FUIAuth defaultAuthUI];
         authUI.delegate = self;
-        // Objective-C
         UINavigationController *authViewController = [authUI authViewController];
-        authViewController.navigationItem.leftBarButtonItem = Nil;
-        [self presentViewController:authViewController animated:true completion:Nil];
-    }else{
+        [self presentViewController:authViewController animated:true completion:Nil]; // Display the view for firebaseUI sign in
+    }else{ // Otherwise sign out
         [self signOut];
         [self loginUIChange];
     }
@@ -42,19 +42,21 @@ FUIAuth *authUI;
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:true];
-    [self loginUIChange];
+    [self loginUIChange]; // Check and see if login button needs to be changed
 }
 
+// Change the login button based on user login status
 -(void)loginUIChange{
-    if(!auth.currentUser){
+    if(!auth.currentUser){ // If user's not logged in
         [BtnLogin setTitle:@"Login" forState:UIControlStateNormal];
         [BtnGetStarted setEnabled:false];
-    }else{
+    }else{ // user's logged in
         [BtnLogin setTitle:@"Logout" forState:UIControlStateNormal];
         [BtnGetStarted setEnabled:true];
     }
 }
 
+// Sign out method
 - (void)signOut {
     NSError *error;
     [authUI signOutWithError:&error];
@@ -63,6 +65,7 @@ FUIAuth *authUI;
     }
 }
 
+// Sign out error handling
 - (void)showAlertWithTitlte:(NSString *)title message:(NSString *)message {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
                                                                    message:message
