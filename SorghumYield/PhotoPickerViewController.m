@@ -41,9 +41,9 @@
 
 -(void) initialiazeMediaPicker: (UIImagePickerControllerSourceType) imagePickerType{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     picker.delegate = self;
     picker.allowsEditing = NO;
-    picker.sourceType = imagePickerType;
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
