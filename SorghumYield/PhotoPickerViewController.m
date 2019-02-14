@@ -39,19 +39,27 @@
     [super disableBackButton];
 }
 
+/*! @brief Method for initializing camera action*/
 -(void) initialiazeMediaPicker: (UIImagePickerControllerSourceType) imagePickerType{
+    // Media controller for image picker
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    // Setting up the type of image picker, which could be camera or photo album
+    picker.sourceType = imagePickerType;
     picker.delegate = self;
     picker.allowsEditing = NO;
+    
+    // Activate the camera or open user's photo album
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+/*! @brief Method for taking photo */
 - (IBAction)takePhoto:(UIButton *)sender {
+    // Invoking the method above for camera action
     [self initialiazeMediaPicker:UIImagePickerControllerSourceTypeCamera];
-    
 }
 
+// Button for openning user's photo album
 - (IBAction)selectPhoto:(UIButton *)sender {
     [self initialiazeMediaPicker:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
 }
@@ -83,6 +91,8 @@
     }
     
     finalAverage/= _measurements.count;
+    
+    
     
     [self.managedObject setValue:[NSNumber numberWithFloat:finalAverage] forKey:@"appAreaAverage"];
     [self performSegueWithIdentifier:@"resultSegue" sender:nil];
