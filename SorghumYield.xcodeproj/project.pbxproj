@@ -33,7 +33,19 @@
 		4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */; };
 		8D2B816F578FA08401954543 /* libPods-SorghumYield.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */; };
 		A13D5AD6217522B00038D4AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */; };
+		E8A6970C2203B5D400AF0E57 /* SorghumYieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A6970B2203B5D400AF0E57 /* SorghumYieldTests.m */; };
+		E8A697142203B87300AF0E57 /* Controllers.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A697132203B87300AF0E57 /* Controllers.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8A6970E2203B5D400AF0E57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B4961261DE63EFA0085D4FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B49612D1DE63EFA0085D4FE;
+			remoteInfo = SorghumYield;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYield.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +95,10 @@
 		4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TFCustomization.m"; path = "SorghumYield/UITextField+TFCustomization.m"; sourceTree = "<group>"; };
 		582259220ED452102DAAD6B9 /* Pods-SorghumYield.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.debug.xcconfig"; sourceTree = "<group>"; };
 		A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorghumYieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A6970B2203B5D400AF0E57 /* SorghumYieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SorghumYieldTests.m; sourceTree = "<group>"; };
+		E8A6970D2203B5D400AF0E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A697132203B87300AF0E57 /* Controllers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Controllers.m; sourceTree = "<group>"; };
 		FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +108,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2B816F578FA08401954543 /* libPods-SorghumYield.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A697062203B5D400AF0E57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +154,7 @@
 				4B806B6D1DE6588000768A09 /* Model */,
 				4B49614B1DE640D00085D4FE /* Image Analysis */,
 				4B4961301DE63EFA0085D4FE /* SorghumYield */,
+				E8A6970A2203B5D400AF0E57 /* SorghumYieldTests */,
 				4B49612F1DE63EFA0085D4FE /* Products */,
 				6220F7803D13F35EB4629859 /* Pods */,
 				30E5BA3A07A65EC48EBEA260 /* Frameworks */,
@@ -141,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4B49612E1DE63EFA0085D4FE /* SorghumYield.app */,
+				E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,6 +315,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E8A6970A2203B5D400AF0E57 /* SorghumYieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8A697132203B87300AF0E57 /* Controllers.m */,
+				E8A6970B2203B5D400AF0E57 /* SorghumYieldTests.m */,
+				E8A6970D2203B5D400AF0E57 /* Info.plist */,
+			);
+			path = SorghumYieldTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,6 +348,24 @@
 			productReference = 4B49612E1DE63EFA0085D4FE /* SorghumYield.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E8A697082203B5D400AF0E57 /* SorghumYieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8A697122203B5D400AF0E57 /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */;
+			buildPhases = (
+				E8A697052203B5D400AF0E57 /* Sources */,
+				E8A697062203B5D400AF0E57 /* Frameworks */,
+				E8A697072203B5D400AF0E57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8A6970F2203B5D400AF0E57 /* PBXTargetDependency */,
+			);
+			name = SorghumYieldTests;
+			productName = SorghumYieldTests;
+			productReference = E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -333,6 +386,11 @@
 							};
 						};
 					};
+					E8A697082203B5D400AF0E57 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B49612D1DE63EFA0085D4FE;
+					};
 				};
 			};
 			buildConfigurationList = 4B4961291DE63EFA0085D4FE /* Build configuration list for PBXProject "SorghumYield" */;
@@ -349,6 +407,7 @@
 			projectRoot = "";
 			targets = (
 				4B49612D1DE63EFA0085D4FE /* SorghumYield */,
+				E8A697082203B5D400AF0E57 /* SorghumYieldTests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +424,13 @@
 				4B49613C1DE63EFA0085D4FE /* Main.storyboard in Resources */,
 				4B394E131DEA3D39004C5E1A /* Old-Info.plist in Resources */,
 				A13D5AD6217522B00038D4AE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A697072203B5D400AF0E57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +545,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8A697052203B5D400AF0E57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A6970C2203B5D400AF0E57 /* SorghumYieldTests.m in Sources */,
+				E8A697142203B87300AF0E57 /* Controllers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8A6970F2203B5D400AF0E57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B49612D1DE63EFA0085D4FE /* SorghumYield */;
+			targetProxy = E8A6970E2203B5D400AF0E57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4B49613A1DE63EFA0085D4FE /* Main.storyboard */ = {
@@ -650,6 +733,69 @@
 			};
 			name = Release;
 		};
+		E8A697102203B5D400AF0E57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SorghumYieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cs.ksu.SorghumYieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SorghumYield.app/SorghumYield";
+			};
+			name = Debug;
+		};
+		E8A697112203B5D400AF0E57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SorghumYieldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cs.ksu.SorghumYieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SorghumYield.app/SorghumYield";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,6 +813,15 @@
 			buildConfigurations = (
 				4B4961491DE63EFA0085D4FE /* Debug */,
 				4B49614A1DE63EFA0085D4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8A697122203B5D400AF0E57 /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A697102203B5D400AF0E57 /* Debug */,
+				E8A697112203B5D400AF0E57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

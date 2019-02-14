@@ -71,7 +71,7 @@ static NSString * baseText = @"Seeds per lb";
         AdditionalInfoTableViewController * vc = [segue destinationViewController];
         [vc setFinalYield:_yieldPerAcreBU];
     }
-
+    
 }
 -(void) initStaticData{
     [self setAppAreaAverage:[NSNumber numberWithFloat:[[self.managedObject valueForKey:@"appAreaAverage"] floatValue]]];
@@ -156,10 +156,10 @@ static NSString * baseText = @"Seeds per lb";
 
 /**
  Sends a report to firebase cloud firestore database
-*/
+ */
 -(void) sendReport{
     
-    // Declare location variables
+    // Declares location variables
     NSManagedObject * autoGPSCoordinates =[self.managedObject valueForKey:@"autoGPSData"];
     NSManagedObject * manualGPSCoordinates =[self.managedObject valueForKey:@"manualGPSData"];
     NSNumber * lat=[NSNumber numberWithInt:0];
@@ -168,7 +168,7 @@ static NSString * baseText = @"Seeds per lb";
     NSString * stateName=@"";
     NSString * countyName=@"";
     
-    // Determine if autoGPS is available. If not, manually get the location.
+    // Determines if autoGPS is available. If not, manually gets the location.
     if( autoGPSCoordinates!=nil){
         lat =[autoGPSCoordinates valueForKey:@"lat"];
         lon =[autoGPSCoordinates valueForKey:@"lon"];
@@ -179,7 +179,7 @@ static NSString * baseText = @"Seeds per lb";
         countyName = [manualGPSCoordinates valueForKey:@"countyName"];
     }
     
-    // Add report data to database
+    // Adds report data to database
     __block FIRDocumentReference *ref =
     [[self.db collectionWithPath:@"reports"] addDocumentWithData:@{
        @"appID": @"sorghumYield",
@@ -212,15 +212,15 @@ static NSString * baseText = @"Seeds per lb";
     
     //Creates a user document if one doesn't exist with this uid
     NSString *UID = [FIRAuth auth].currentUser.uid;
-
+    
     FIRDocumentReference *ref2 =
     [[self.db collectionWithPath:@"users"] documentWithPath:UID];
     
-    // Set user data when creating for the first time
+    // Sets user data when creating for the first time
     [ref2 setData:@{
-        @"email": [FIRAuth auth].currentUser.email}
-        merge:YES
-        completion:^(NSError * _Nullable error) {
+                    @"email": [FIRAuth auth].currentUser.email}
+            merge:YES
+       completion:^(NSError * _Nullable error) {
            if (error != nil) {
                NSLog(@"Error adding document: %@", error);
            } else {
@@ -228,20 +228,61 @@ static NSString * baseText = @"Seeds per lb";
            }
        }];
     
-    // Atomically add a new reportID to the "reports" array field
+    // Adds the new reportID to the user's "reports" array field
     [ref2 updateData:@{
-       @"reports": [FIRFieldValue fieldValueForArrayUnion:@[ref.documentID]]
-       } completion:^(NSError * _Nullable error) {
-           if (error != nil) {
-               NSLog(@"Error adding document: %@", error);
-           } else {
-               NSLog(@"Document added with ID: %@", ref2.documentID);
-           }
-       }];
+                       @"reports": [FIRFieldValue fieldValueForArrayUnion:@[ref.documentID]]
+                       } completion:^(NSError * _Nullable error) {
+                           if (error != nil) {
+                               NSLog(@"Error adding document: %@", error);
+                           }
+                       }];
     
-    // Save images?
-    //[[FirebaseManager sharedFirebaseManager] storeImages:ref :self.managedObject];
+    // -------- Stores images -----------
     
+    // Gets a reference to the storage service
+    FIRStorage *storage = [FIRStorage storage];
+    FIRStorageReference *storageRef = [storage reference];
+    
+    // Gets array of photos to be uploaded
+    NSMutableSet *measurements = [self.managedObject valueForKey:@"measurements"];
+    NSArray *objects = measurements.allObjects;
+    
+    // Creates file metadata (specifies file type)
+    FIRStorageMetadata *mdata = [[FIRStorageMetadata alloc] init];
+    mdata.contentType = @"image/jpeg";
+    
+    // Iterates through array and upload photos
+    NSData *data;
+    int i = 0;
+    for (NSObject *item in objects) {
+        // Create photo's new path (images/reportID/photoName)
+        FIRStorageReference *path = [storageRef child:[[[@"images/" stringByAppendingString: ref.documentID] stringByAppendingString: @"/"] stringByAppendingString: [NSString stringWithFormat:@"%d",i]]];
+        
+        i++;
+        data = [item valueForKey:@"processedImage"];
+        
+        // Uploads the file (data) to the storage location (path)
+        FIRStorageUploadTask *uploadTask = [path putData:data metadata:mdata
+          completion:^(FIRStorageMetadata *metadata, NSError *error) {
+              if (error != nil) {
+                  NSLog(@"Error uploading image: %@", error);
+              } else {
+                  // Fetches the photo's download URL and adds it to the report's "images" array field
+                  [path downloadURLWithCompletion:^(NSURL *URL, NSError *error){
+                      if (error != nil) {
+                          NSLog(@"Error retrieving download url: %@", error);
+                      } else {
+                          FIRDocumentReference *ref3 = [[self.db collectionWithPath:@"reports"] documentWithPath:ref.documentID];
+                          NSString *sURL = URL.absoluteString;
+                          [ref3 updateData:@{@"images": [FIRFieldValue fieldValueForArrayUnion:@[sURL]]}];
+                      }
+                  }];
+              }
+          }];
+        
+    }
+    
+    [self.managedObject setValue:nil forKey:@"measurements"];
     [self performSegueWithIdentifier:@"AdditionalInfoSegue" sender:self];
 }
 
