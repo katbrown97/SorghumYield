@@ -12,6 +12,7 @@ The Sorghum app aims to help farmers generate and store reports containing predi
 	* Input sorghum field data
 	* Instructions for users on how to take sorghum photo
 	* Take/upload photos
+	* Analyze photos to produce yield estimate
 * Report Submission
 	* Upload report to firebase database
 
