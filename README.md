@@ -35,6 +35,7 @@ Double click **SorghumYield.xcworkspace** to trigger Xcode or simply open the th
 For this section, we will explain what each controller's role is to help you get a general impression of how the app functions.
 
 **IntroViewController**
+
 The main functionality of IntroViewController is handling user authentication. 
 
 **PhotoPickerViewController**
