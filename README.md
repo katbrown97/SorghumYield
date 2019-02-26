@@ -2,7 +2,20 @@
 
 The Sorghum app aims to help farmers generate and store reports containing predictions on the yield of their sorghum fields. Users can input both photos and information about their fields, which are then analyzed within the app to calculate a yield prediction. Each report contains information regarding farm measurements, plant photos, and geological locations. This information will help K-State researchers and farmers alike.  
 
-## Technologies & Tool Used
+## Features
+
+* User authentication
+	* Login with user’s existing account
+	* Sign up a new account
+	* Reset user account’s password
+* Report generating
+	* Input sorghum field data
+	* Instructions for users on how to take sorghum photo
+	* Take/upload photos
+* Report Submission
+	* Upload report to firebase database
+
+## Technologies & Tool 
 
 - Objective-C
 - Google Firebase  
@@ -20,6 +33,9 @@ Double click **SorghumYield.xcworkspace** to trigger Xcode or simply open the th
 ## Get Started
 
 For this section, we will explain what each controller's role is to help you get a general impression of how the app functions.
+
+**IntroViewController**
+The main functionality of IntroViewController is handling user authentication. 
 
 **PhotoPickerViewController**
 
