@@ -21,8 +21,8 @@ Double click **SorghumYield.xcworkspace** to trigger Xcode or simply open the th
 
 For this section, we will explain what each controller's role is to help you get a general impression of how app functions.
 
-
-
+**PhotoPickerViewController**
+This controller is reponsible for taking photos from both carmera and gallery and processing the images.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
