@@ -16,12 +16,16 @@
 
 #import "Firestore/Source/Core/FSTEventManager.h"
 
+#include <utility>
+#include <vector>
+
 #import "Firestore/Source/Core/FSTQuery.h"
 #import "Firestore/Source/Core/FSTSyncEngine.h"
 #import "Firestore/Source/Model/FSTDocumentSet.h"
 
 #include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
 
+using firebase::firestore::core::DocumentViewChange;
 using firebase::firestore::model::OnlineState;
 using firebase::firestore::model::TargetId;
 
@@ -120,24 +124,25 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)queryDidChangeViewSnapshot:(FSTViewSnapshot *)snapshot {
-  HARD_ASSERT(snapshot.documentChanges.count > 0 || snapshot.syncStateChanged,
+  HARD_ASSERT(!snapshot.documentChanges.empty() || snapshot.syncStateChanged,
               "We got a new snapshot with no changes?");
 
   if (!self.options.includeDocumentMetadataChanges) {
     // Remove the metadata-only changes.
-    NSMutableArray<FSTDocumentViewChange *> *changes = [NSMutableArray array];
-    for (FSTDocumentViewChange *change in snapshot.documentChanges) {
-      if (change.type != FSTDocumentViewChangeTypeMetadata) {
-        [changes addObject:change];
+    std::vector<DocumentViewChange> changes;
+    for (const DocumentViewChange &change : snapshot.documentChanges) {
+      if (change.type() != DocumentViewChange::Type::kMetadata) {
+        changes.push_back(change);
       }
     }
     snapshot = [[FSTViewSnapshot alloc] initWithQuery:snapshot.query
                                             documents:snapshot.documents
                                          oldDocuments:snapshot.oldDocuments
-                                      documentChanges:changes
+                                      documentChanges:std::move(changes)
                                             fromCache:snapshot.fromCache
-                                     hasPendingWrites:snapshot.hasPendingWrites
-                                     syncStateChanged:snapshot.syncStateChanged];
+                                          mutatedKeys:snapshot.mutatedKeys
+                                     syncStateChanged:snapshot.syncStateChanged
+                              excludesMetadataChanges:YES];
   }
 
   if (!self.raisedInitialEvent) {
@@ -191,7 +196,7 @@ NS_ASSUME_NONNULL_BEGIN
   // We don't need to handle includeDocumentMetadataChanges here because the Metadata only changes
   // have already been stripped out if needed. At this point the only changes we will see are the
   // ones we should propagate.
-  if (snapshot.documentChanges.count > 0) {
+  if (!snapshot.documentChanges.empty()) {
     return YES;
   }
 
@@ -208,25 +213,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)raiseInitialEventForSnapshot:(FSTViewSnapshot *)snapshot {
   HARD_ASSERT(!self.raisedInitialEvent, "Trying to raise initial events for second time");
-  snapshot = [[FSTViewSnapshot alloc]
-         initWithQuery:snapshot.query
-             documents:snapshot.documents
-          oldDocuments:[FSTDocumentSet documentSetWithComparator:snapshot.query.comparator]
-       documentChanges:[FSTQueryListener getInitialViewChangesFor:snapshot]
-             fromCache:snapshot.fromCache
-      hasPendingWrites:snapshot.hasPendingWrites
-      syncStateChanged:YES];
+  snapshot = [FSTViewSnapshot snapshotForInitialDocuments:snapshot.documents
+                                                    query:snapshot.query
+                                              mutatedKeys:snapshot.mutatedKeys
+                                                fromCache:snapshot.fromCache
+                                  excludesMetadataChanges:snapshot.excludesMetadataChanges];
   self.raisedInitialEvent = YES;
   self.viewSnapshotHandler(snapshot, nil);
-}
-
-+ (NSArray<FSTDocumentViewChange *> *)getInitialViewChangesFor:(FSTViewSnapshot *)snapshot {
-  NSMutableArray<FSTDocumentViewChange *> *result = [NSMutableArray array];
-  for (FSTDocument *doc in snapshot.documents.documentEnumerator) {
-    [result addObject:[FSTDocumentViewChange changeWithDocument:doc
-                                                           type:FSTDocumentViewChangeTypeAdded]];
-  }
-  return result;
 }
 
 @end
@@ -255,7 +248,7 @@ NS_ASSUME_NONNULL_BEGIN
     _syncEngine = syncEngine;
     _queries = [NSMutableDictionary dictionary];
 
-    _syncEngine.delegate = self;
+    _syncEngine.syncEngineDelegate = self;
   }
   return self;
 }

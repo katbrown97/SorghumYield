@@ -6,5 +6,5 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Firebase/Firestore'
 pod 'FirebaseUI/Auth'
-pod 'FirebaseUI', '~> 5.0'
+pod 'FirebaseUI'
 end
