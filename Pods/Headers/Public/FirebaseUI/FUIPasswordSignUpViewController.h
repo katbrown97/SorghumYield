@@ -1,1 +1,1 @@
-../../../FirebaseUI/EmailAuth/FirebaseEmailAuthUI/FUIPasswordSignUpViewController.h
+../../../FirebaseUI/FirebaseAuthUI/FUIPasswordSignUpViewController.h

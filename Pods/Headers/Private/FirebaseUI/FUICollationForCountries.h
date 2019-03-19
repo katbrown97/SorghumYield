@@ -1,1 +1,1 @@
-../../../FirebaseUI/PhoneAuth/FirebasePhoneAuthUI/CountryCode/FUICollationForCountries.h
+../../../FirebaseUI/FirebasePhoneAuthUI/CountryCode/FUICollationForCountries.h

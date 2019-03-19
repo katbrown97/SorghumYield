@@ -1,1 +1,1 @@
-../../../FirebaseUI/Auth/FirebaseAuthUI/AccountManagement/FUIAccountSettingsOperationUnlinkAccount.h
+../../../FirebaseUI/FirebaseAuthUI/AccountManagement/FUIAccountSettingsOperationUnlinkAccount.h

@@ -1,1 +1,1 @@
-../../../FirebaseUI/Auth/FirebaseAuthUI/AccountManagement/FUIAccountSettingsOperationForgotPassword.h
+../../../FirebaseUI/FirebaseAuthUI/AccountManagement/FUIAccountSettingsOperationForgotPassword.h

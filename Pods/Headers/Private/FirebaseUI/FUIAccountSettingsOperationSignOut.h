@@ -1,1 +1,1 @@
-../../../FirebaseUI/Auth/FirebaseAuthUI/AccountManagement/FUIAccountSettingsOperationSignOut.h
+../../../FirebaseUI/FirebaseAuthUI/AccountManagement/FUIAccountSettingsOperationSignOut.h

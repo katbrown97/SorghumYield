@@ -1,1 +1,1 @@
-../../../FirebaseUI/PhoneAuth/FirebasePhoneAuthUI/FUIPhoneVerificationViewController.h
+../../../FirebaseUI/FirebasePhoneAuthUI/FUIPhoneVerificationViewController.h

@@ -1,1 +1,1 @@
-../../../FirebaseUI/Auth/FirebaseAuthUI/FUIAuthTableViewCell.h
+../../../FirebaseUI/FirebaseAuthUI/FUIAuthTableViewCell.h

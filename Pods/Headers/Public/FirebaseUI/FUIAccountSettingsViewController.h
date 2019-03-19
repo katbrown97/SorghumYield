@@ -1,1 +1,1 @@
-../../../FirebaseUI/Auth/FirebaseAuthUI/AccountManagement/FUIAccountSettingsViewController.h
+../../../FirebaseUI/FirebaseAuthUI/AccountManagement/FUIAccountSettingsViewController.h

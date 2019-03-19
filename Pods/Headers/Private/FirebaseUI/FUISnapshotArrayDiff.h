@@ -1,1 +1,1 @@
-../../../FirebaseUI/Firestore/FirebaseFirestoreUI/FUISnapshotArrayDiff.h
+../../../FirebaseUI/FirebaseFirestoreUI/FUISnapshotArrayDiff.h

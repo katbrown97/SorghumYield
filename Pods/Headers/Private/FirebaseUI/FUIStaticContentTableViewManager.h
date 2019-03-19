@@ -1,1 +1,1 @@
-../../../FirebaseUI/Auth/FirebaseAuthUI/FUIStaticContentTableViewManager.h
+../../../FirebaseUI/FirebaseAuthUI/FUIStaticContentTableViewManager.h

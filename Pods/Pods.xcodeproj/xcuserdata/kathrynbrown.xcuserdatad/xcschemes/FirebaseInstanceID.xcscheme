@@ -17,7 +17,7 @@
                BlueprintIdentifier = "64FB082BC4CACC71AA13AB976A48E30E"
                BlueprintName = "FirebaseInstanceID"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "FirebaseInstanceID">
+               BuildableName = "libFirebaseInstanceID.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

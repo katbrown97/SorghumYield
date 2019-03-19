@@ -7,7 +7,7 @@
 //
 
 #import "IntroViewController.h"
-#import "FirebaseUI.h"
+#import "FirebaseAuthUI.h"
 #import "FUIAuthProvider.h"
 
 

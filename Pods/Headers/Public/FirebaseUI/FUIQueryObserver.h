@@ -1,1 +1,1 @@
-../../../FirebaseUI/Database/FirebaseDatabaseUI/FUIQueryObserver.h
+../../../FirebaseUI/FirebaseDatabaseUI/FUIQueryObserver.h
