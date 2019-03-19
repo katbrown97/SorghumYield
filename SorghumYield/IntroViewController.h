@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "FirebaseUI.h"
+#import "FirebaseAuthUI.h"
 
 @interface IntroViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *BtnGetStarted;
