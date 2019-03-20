@@ -1,0 +1,6 @@
+module Pods_SorghumYield {
+  umbrella header "Pods-SorghumYield-umbrella.h"
+
+  export *
+  module * { export * }
+}

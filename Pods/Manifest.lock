@@ -15,66 +15,67 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.41.2):
     - FBSDKCoreKit
-  - Firebase (5.18.0):
-    - Firebase/Core (= 5.18.0)
-  - Firebase/Auth (5.18.0):
+  - Firebase (5.19.0):
+    - Firebase/Core (= 5.19.0)
+  - Firebase/Auth (5.19.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (= 5.4.0)
-  - Firebase/Core (5.18.0):
+    - FirebaseAuth (= 5.4.1)
+  - Firebase/Core (5.19.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.7.0)
-  - Firebase/CoreOnly (5.18.0):
-    - FirebaseCore (= 5.3.1)
-  - Firebase/Database (5.18.0):
+    - FirebaseAnalytics (= 5.8.0)
+  - Firebase/CoreOnly (5.19.0):
+    - FirebaseCore (= 5.4.0)
+  - Firebase/Database (5.19.0):
     - Firebase/CoreOnly
-    - FirebaseDatabase (= 5.1.0)
-  - Firebase/Firestore (5.18.0):
+    - FirebaseDatabase (= 5.1.1)
+  - Firebase/Firestore (5.19.0):
     - Firebase/CoreOnly
-    - FirebaseFirestore (= 1.0.2)
-  - Firebase/Storage (5.18.0):
+    - FirebaseFirestore (= 1.1.0)
+  - Firebase/Storage (5.19.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (= 3.1.0)
-  - FirebaseAnalytics (5.7.0):
-    - FirebaseCore (~> 5.3)
-    - FirebaseInstanceID (~> 3.6)
-    - GoogleAppMeasurement (= 5.7.0)
+    - FirebaseStorage (= 3.1.1)
+  - FirebaseAnalytics (5.8.0):
+    - FirebaseCore (~> 5.4)
+    - FirebaseInstanceID (~> 3.8)
+    - GoogleAppMeasurement (= 5.8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (5.4.0):
+  - FirebaseAuth (5.4.1):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.2)
     - GoogleUtilities/Environment (~> 5.2)
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseAuthInterop (1.0.0)
-  - FirebaseCore (5.3.1):
+  - FirebaseCore (5.4.0):
+    - GoogleUtilities/Environment (~> 5.2)
     - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseDatabase (5.1.0):
+  - FirebaseDatabase (5.1.1):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.2)
     - leveldb-library (~> 1.18)
-  - FirebaseFirestore (1.0.2):
+  - FirebaseFirestore (1.1.0):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.2)
-    - FirebaseFirestore/abseil-cpp (= 1.0.2)
+    - FirebaseFirestore/abseil-cpp (= 1.1.0)
     - "gRPC-C++ (= 0.0.6)"
     - leveldb-library (~> 1.20)
     - nanopb (~> 0.3.901)
     - Protobuf (~> 3.1)
-  - FirebaseFirestore/abseil-cpp (1.0.2):
+  - FirebaseFirestore/abseil-cpp (1.1.0):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.2)
     - "gRPC-C++ (= 0.0.6)"
     - leveldb-library (~> 1.20)
     - nanopb (~> 0.3.901)
     - Protobuf (~> 3.1)
-  - FirebaseInstanceID (3.7.0):
+  - FirebaseInstanceID (3.8.0):
     - FirebaseCore (~> 5.2)
     - GoogleUtilities/Environment (~> 5.2)
     - GoogleUtilities/UserDefaults (~> 5.2)
-  - FirebaseStorage (3.1.0):
+  - FirebaseStorage (3.1.1):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.2)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -110,7 +111,7 @@ PODS:
   - FirebaseUI/Twitter (5.2.2):
     - FirebaseUI/Auth
     - TwitterKit (~> 3.0)
-  - GoogleAppMeasurement (5.7.0):
+  - GoogleAppMeasurement (5.8.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
     - GoogleUtilities/Network (~> 5.2)
@@ -169,8 +170,10 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Nimble (8.0.1)
   - OpenCV (2.4.9)
   - Protobuf (3.7.0)
+  - Quick (2.0.0)
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
@@ -181,7 +184,9 @@ PODS:
 DEPENDENCIES:
   - Firebase (~> 5.2)
   - FirebaseUI (~> 5.0)
+  - Nimble
   - OpenCV (= 2.4.9)
+  - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -208,8 +213,10 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Nimble
     - OpenCV
     - Protobuf
+    - Quick
     - SDWebImage
     - TwitterCore
     - TwitterKit
@@ -219,17 +226,17 @@ SPEC CHECKSUMS:
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
   FBSDKCoreKit: 559246ca24848bf7254695476df425b88651dcb3
   FBSDKLoginKit: 48f1758be0779ac5d2ef1b50ddfa75f8ad683180
-  Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
-  FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
-  FirebaseAuth: d85d052354447f30b4b2a805ab91b511458b56a6
+  Firebase: c60d49e9c2630875a96207d15e2affb8364996d1
+  FirebaseAnalytics: fd72a26bf8dac84cefba2f0864366f718555a5b0
+  FirebaseAuth: cbb892a66baed025efc179372598941252acf853
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
-  FirebaseCore: 52f851b30e11360f1e67cf04b1edfebf0a47a2d3
-  FirebaseDatabase: 23acb0c53cd4d4070a427b60100b2e4aaa97c45d
-  FirebaseFirestore: ccdaffb8a73c591ff61872b8f7905ad0c237ef50
-  FirebaseInstanceID: bd6fc5a258884e206fd5c474ebe4f5b00e21770e
-  FirebaseStorage: 29075f874c2b3cf61e5221a62c4ceefc809e5412
+  FirebaseCore: 22a79a961c3951ef2f77b67bfbc99e454247b319
+  FirebaseDatabase: 2c15b0ea6f2c6eb5e57413f9d6340f1e50b81ae3
+  FirebaseFirestore: 1531eefe02da66be6860966ac4e2cdac635706e2
+  FirebaseInstanceID: cf488df2f4b79782f0e430b04a0e17c0aa7979b2
+  FirebaseStorage: 6162ef4322502b818d9de0ec552f5226d283de43
   FirebaseUI: 09519bf436a055cd696bf68687d624423150e4c0
-  GoogleAppMeasurement: 6cf307834da065863f9faf4c0de0a936d81dd832
+  GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
   GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
@@ -238,12 +245,14 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   OpenCV: bb17904e55fc19b1f0f6c3e29bc04a7dd31eddb9
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 5ab60c8a31b42802ea574ebf200206362a97ee5d
+PODFILE CHECKSUM: 043f9055bc9b1117ce9901e1c56a109067666183
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3

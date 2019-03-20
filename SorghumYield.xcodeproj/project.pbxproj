@@ -34,8 +34,8 @@
 		8D2B816F578FA08401954543 /* libPods-SorghumYield.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */; };
 		A13D5AD6217522B00038D4AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */; };
 		A1EEF2612240A6D0004B5024 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */; };
-		E8A6970C2203B5D400AF0E57 /* SorghumYieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A6970B2203B5D400AF0E57 /* SorghumYieldTests.m */; };
-		E8A697142203B87300AF0E57 /* Controllers.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A697132203B87300AF0E57 /* Controllers.m */; };
+		E08D704C214021B9634978BC /* libPods-SorghumYield-Tests-SorghumYieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8E1FCDE421AE15E770207 /* libPods-SorghumYield-Tests-SorghumYieldTests.a */; };
+		E834AC2F22419B1C0073E0E2 /* IntrovViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834AC2E22419B1C0073E0E2 /* IntrovViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,10 +97,12 @@
 		582259220ED452102DAAD6B9 /* Pods-SorghumYield.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.debug.xcconfig"; sourceTree = "<group>"; };
 		A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig"; sourceTree = "<group>"; };
+		E834AC2D22419B1C0073E0E2 /* SorghumYieldTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SorghumYieldTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E834AC2E22419B1C0073E0E2 /* IntrovViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovViewControllerTest.swift; sourceTree = "<group>"; };
 		E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorghumYieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8A6970B2203B5D400AF0E57 /* SorghumYieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SorghumYieldTests.m; sourceTree = "<group>"; };
-		E8A6970D2203B5D400AF0E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8A697132203B87300AF0E57 /* Controllers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Controllers.m; sourceTree = "<group>"; };
+		F6D8E1FCDE421AE15E770207 /* libPods-SorghumYield-Tests-SorghumYieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYield-Tests-SorghumYieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08D704C214021B9634978BC /* libPods-SorghumYield-Tests-SorghumYieldTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +132,7 @@
 			children = (
 				A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */,
 				3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */,
+				F6D8E1FCDE421AE15E770207 /* libPods-SorghumYield-Tests-SorghumYieldTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -315,6 +319,8 @@
 			children = (
 				582259220ED452102DAAD6B9 /* Pods-SorghumYield.debug.xcconfig */,
 				FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */,
+				C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */,
+				DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -322,9 +328,8 @@
 		E8A6970A2203B5D400AF0E57 /* SorghumYieldTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8A697132203B87300AF0E57 /* Controllers.m */,
-				E8A6970B2203B5D400AF0E57 /* SorghumYieldTests.m */,
-				E8A6970D2203B5D400AF0E57 /* Info.plist */,
+				E834AC2E22419B1C0073E0E2 /* IntrovViewControllerTest.swift */,
+				E834AC2D22419B1C0073E0E2 /* SorghumYieldTests-Bridging-Header.h */,
 			);
 			path = SorghumYieldTests;
 			sourceTree = "<group>";
@@ -356,9 +361,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8A697122203B5D400AF0E57 /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */;
 			buildPhases = (
+				8747D33EBD8B560198B5B7CE /* [CP] Check Pods Manifest.lock */,
 				E8A697052203B5D400AF0E57 /* Sources */,
 				E8A697062203B5D400AF0E57 /* Frameworks */,
 				E8A697072203B5D400AF0E57 /* Resources */,
+				B65210742FE3AAB310268D3E /* [CP] Embed Pods Frameworks */,
+				3D5F14C22B37B4DF34F09E25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,6 +400,7 @@
 					};
 					E8A697082203B5D400AF0E57 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4B49612D1DE63EFA0085D4FE;
 					};
@@ -441,13 +450,75 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D5F14C22B37B4DF34F09E25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8747D33EBD8B560198B5B7CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SorghumYield-Tests-SorghumYieldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		93842EA19E018D7686749814 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
@@ -474,7 +545,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		95E06D51A6058BCB91156C74 /* [CP] Embed Pods Frameworks */ = {
@@ -485,7 +556,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-frameworks.sh",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
@@ -498,7 +569,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B65210742FE3AAB310268D3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-frameworks.sh",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EBD109D87393DD468BAFE3C9 /* [CP] Check Pods Manifest.lock */ = {
@@ -551,8 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8A6970C2203B5D400AF0E57 /* SorghumYieldTests.m in Sources */,
-				E8A697142203B87300AF0E57 /* Controllers.m in Sources */,
+				E834AC2F22419B1C0073E0E2 /* IntrovViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,10 +831,12 @@
 		};
 		E8A697102203B5D400AF0E57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -762,6 +858,9 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cs.ksu.SorghumYieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYieldTests/SorghumYieldTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SorghumYield.app/SorghumYield";
 			};
@@ -769,10 +868,12 @@
 		};
 		E8A697112203B5D400AF0E57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -793,6 +894,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cs.ksu.SorghumYieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYieldTests/SorghumYieldTests-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SorghumYield.app/SorghumYield";
 			};
