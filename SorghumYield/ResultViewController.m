@@ -69,7 +69,7 @@ static NSString * baseText = @"Seeds per lb";
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([[segue identifier] isEqualToString:@"AdditionalInfoSegue"]){
         AdditionalInfoTableViewController * vc = [segue destinationViewController];
-        [vc setFinalYield:_yieldPerAcreBU];
+        [vc setFinalYield:_totalYield];
     }
     
 }
@@ -80,7 +80,7 @@ static NSString * baseText = @"Seeds per lb";
     int headsPerAcreRow = [[self.managedObject valueForKey:@"headsPerThousandth"] intValue];
     NSNumber *  rowsPerAcre = [self.managedObject valueForKey:@"rowSpacing"];
     
-    NSNumber * headsPerAcre = [NSNumber numberWithInt:(10000 * headsPerAcreRow)];
+    NSNumber * headsPerAcre = [NSNumber numberWithInt:(1000 * headsPerAcreRow)];
     
     [self setNumberOfPlantsPerAcre:headsPerAcre];
     [self setNumberOfAcres:[self.managedObject valueForKey:@"numOfAcres"]];
@@ -200,8 +200,8 @@ static NSString * baseText = @"Seeds per lb";
        @"appAreaAverage":   [_appAreaAverage stringValue],
        @"seedsPerPound":    [_seedsPerPound stringValue],
        @"grainCount":       [_grainsPerPlant stringValue],
-       @"yieldPerAcre":   [_yieldPerAcre stringValue],
-       @"totalYield":   [_totalYield stringValue]
+       @"yieldPerAcre_lb":  [_yieldPerAcre stringValue],
+       @"totalYield_bu":    [_totalYield stringValue]
        } completion:^(NSError * _Nullable error) {
            if (error != nil) {
                NSLog(@"Error adding document: %@", error);
