@@ -59,9 +59,9 @@
     [self initialiazeMediaPicker:UIImagePickerControllerSourceTypeCamera];
 }
 
-// Button for openning user's photo album
+// Button for opening user's photo album
 - (IBAction)selectPhoto:(UIButton *)sender {
-    [self initialiazeMediaPicker:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [self initialiazeMediaPicker:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
 - (IBAction)yieldButtonPress:(id)sender {

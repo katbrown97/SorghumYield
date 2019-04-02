@@ -115,7 +115,7 @@ static NSString * baseText = @"Seeds per lb";
     [self setYieldPerAcre:[NSNumber numberWithLong:([_weightPerPlant floatValue] * [_numberOfPlantsPerAcre floatValue] )]];
     
     [self setYieldPerAcreBU:[NSNumber numberWithLong:([_yieldPerAcre floatValue]/56)]];
-    [self setTotalYield:[NSNumber numberWithLong:[_yieldPerAcre floatValue]/56 * [_numberOfAcres intValue]]];
+    [self setTotalYield:[NSNumber numberWithLong:[_yieldPerAcreBU floatValue] * [_numberOfAcres intValue]]];
     [self updateTableViewSource];
     
 }
@@ -201,6 +201,7 @@ static NSString * baseText = @"Seeds per lb";
        @"seedsPerPound":    [_seedsPerPound stringValue],
        @"grainCount":       [_grainsPerPlant stringValue],
        @"yieldPerAcre_lb":  [_yieldPerAcre stringValue],
+       @"yieldPerAcre_bu":  [_yieldPerAcreBU stringValue],
        @"totalYield_bu":    [_totalYield stringValue]
        } completion:^(NSError * _Nullable error) {
            if (error != nil) {
