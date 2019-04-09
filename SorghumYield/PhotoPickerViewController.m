@@ -36,7 +36,6 @@
 
 - (void)setupView{
     [self setTitle:@"Take/upload photos"];
-    [super disableBackButton];
 }
 
 /*! @brief Method for initializing camera action*/

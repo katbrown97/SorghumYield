@@ -33,11 +33,16 @@
     _pageTitles = @[@"Prepare a sheet of paper", @"Draw a solid square", @"Place the plant", @"Valid result", @"Common mistakes", @"Plant off page", @"Plant touches square", @"Sharp angle", @"Sharp angle"];
     _pageImages = @[@"stepOnePage.pdf", @"stepTwoPage.pdf", @"stepThreePage.pdf", @"stepFourPage" ,@"",@"Mistake1",@"Mistake2",@"Mistake3",@"Mistake3"];
 
+    // Adds skip button
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Skip"
+         style:UIBarButtonItemStylePlain
+         target:self
+         action:@selector(skipInstructions:)];
+    [self.navigationItem setRightBarButtonItem:item animated:YES];
+
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
     self.pageViewController.delegate = self;
-    
-    
     
     PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
@@ -51,6 +56,10 @@
     
 }
 
+// Skips the instruction screens
+-(void)skipInstructions:(id)sender {
+    [self performSegueWithIdentifier:@"TutorialEnd" sender:self];
+}
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
