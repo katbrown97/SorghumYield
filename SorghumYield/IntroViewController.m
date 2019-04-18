@@ -20,9 +20,11 @@
 
 FIRAuth *auth;
 FUIAuth *authUI;
+NSString *currentState;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentState = @"homeView";
 }
 // Button for login
 - (IBAction)login:(id)sender {
