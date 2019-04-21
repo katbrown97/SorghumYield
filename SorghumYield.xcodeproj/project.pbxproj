@@ -34,12 +34,11 @@
 		8D2B816F578FA08401954543 /* libPods-SorghumYield.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */; };
 		A13D5AD6217522B00038D4AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */; };
 		A1EEF2612240A6D0004B5024 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */; };
-		E08D704C214021B9634978BC /* libPods-SorghumYield-Tests-SorghumYieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8E1FCDE421AE15E770207 /* libPods-SorghumYield-Tests-SorghumYieldTests.a */; };
-		E834AC2F22419B1C0073E0E2 /* IntrovViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834AC2E22419B1C0073E0E2 /* IntrovViewControllerTest.swift */; };
+		E8ADD6FE226D30AF00F7C3AA /* SorghumYieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ADD6FD226D30AF00F7C3AA /* SorghumYieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E8A6970E2203B5D400AF0E57 /* PBXContainerItemProxy */ = {
+		E8ADD700226D30AF00F7C3AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B4961261DE63EFA0085D4FE /* Project object */;
 			proxyType = 1;
@@ -99,9 +98,9 @@
 		A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig"; sourceTree = "<group>"; };
-		E834AC2D22419B1C0073E0E2 /* SorghumYieldTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SorghumYieldTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		E834AC2E22419B1C0073E0E2 /* IntrovViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrovViewControllerTest.swift; sourceTree = "<group>"; };
-		E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorghumYieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8ADD6FB226D30AF00F7C3AA /* SorghumYieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorghumYieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8ADD6FD226D30AF00F7C3AA /* SorghumYieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorghumYieldTests.swift; sourceTree = "<group>"; };
+		E8ADD6FF226D30AF00F7C3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D8E1FCDE421AE15E770207 /* libPods-SorghumYield-Tests-SorghumYieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYield-Tests-SorghumYieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,11 +115,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8A697062203B5D400AF0E57 /* Frameworks */ = {
+		E8ADD6F8226D30AF00F7C3AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08D704C214021B9634978BC /* libPods-SorghumYield-Tests-SorghumYieldTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +160,7 @@
 				4B806B6D1DE6588000768A09 /* Model */,
 				4B49614B1DE640D00085D4FE /* Image Analysis */,
 				4B4961301DE63EFA0085D4FE /* SorghumYield */,
-				E8A6970A2203B5D400AF0E57 /* SorghumYieldTests */,
+				E8ADD6FC226D30AF00F7C3AA /* SorghumYieldTests */,
 				4B49612F1DE63EFA0085D4FE /* Products */,
 				6220F7803D13F35EB4629859 /* Pods */,
 				30E5BA3A07A65EC48EBEA260 /* Frameworks */,
@@ -173,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4B49612E1DE63EFA0085D4FE /* SorghumYield.app */,
-				E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */,
+				E8ADD6FB226D30AF00F7C3AA /* SorghumYieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,11 +323,11 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E8A6970A2203B5D400AF0E57 /* SorghumYieldTests */ = {
+		E8ADD6FC226D30AF00F7C3AA /* SorghumYieldTests */ = {
 			isa = PBXGroup;
 			children = (
-				E834AC2E22419B1C0073E0E2 /* IntrovViewControllerTest.swift */,
-				E834AC2D22419B1C0073E0E2 /* SorghumYieldTests-Bridging-Header.h */,
+				E8ADD6FD226D30AF00F7C3AA /* SorghumYieldTests.swift */,
+				E8ADD6FF226D30AF00F7C3AA /* Info.plist */,
 			);
 			path = SorghumYieldTests;
 			sourceTree = "<group>";
@@ -357,25 +355,22 @@
 			productReference = 4B49612E1DE63EFA0085D4FE /* SorghumYield.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E8A697082203B5D400AF0E57 /* SorghumYieldTests */ = {
+		E8ADD6FA226D30AF00F7C3AA /* SorghumYieldTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8A697122203B5D400AF0E57 /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */;
+			buildConfigurationList = E8ADD702226D30AF00F7C3AA /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */;
 			buildPhases = (
-				8747D33EBD8B560198B5B7CE /* [CP] Check Pods Manifest.lock */,
-				E8A697052203B5D400AF0E57 /* Sources */,
-				E8A697062203B5D400AF0E57 /* Frameworks */,
-				E8A697072203B5D400AF0E57 /* Resources */,
-				B65210742FE3AAB310268D3E /* [CP] Embed Pods Frameworks */,
-				3D5F14C22B37B4DF34F09E25 /* [CP] Copy Pods Resources */,
+				E8ADD6F7226D30AF00F7C3AA /* Sources */,
+				E8ADD6F8226D30AF00F7C3AA /* Frameworks */,
+				E8ADD6F9226D30AF00F7C3AA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E8A6970F2203B5D400AF0E57 /* PBXTargetDependency */,
+				E8ADD701226D30AF00F7C3AA /* PBXTargetDependency */,
 			);
 			name = SorghumYieldTests;
 			productName = SorghumYieldTests;
-			productReference = E8A697092203B5D400AF0E57 /* SorghumYieldTests.xctest */;
+			productReference = E8ADD6FB226D30AF00F7C3AA /* SorghumYieldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -384,12 +379,13 @@
 		4B4961261DE63EFA0085D4FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Robert Sebek";
 				TargetAttributes = {
 					4B49612D1DE63EFA0085D4FE = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L7Q7ALQ68B;
+						DevelopmentTeam = T7LK993P2F;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -398,9 +394,9 @@
 							};
 						};
 					};
-					E8A697082203B5D400AF0E57 = {
+					E8ADD6FA226D30AF00F7C3AA = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						DevelopmentTeam = T7LK993P2F;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4B49612D1DE63EFA0085D4FE;
 					};
@@ -420,7 +416,7 @@
 			projectRoot = "";
 			targets = (
 				4B49612D1DE63EFA0085D4FE /* SorghumYield */,
-				E8A697082203B5D400AF0E57 /* SorghumYieldTests */,
+				E8ADD6FA226D30AF00F7C3AA /* SorghumYieldTests */,
 			);
 		};
 /* End PBXProject section */
@@ -440,7 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8A697072203B5D400AF0E57 /* Resources */ = {
+		E8ADD6F9226D30AF00F7C3AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,68 +446,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D5F14C22B37B4DF34F09E25 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-resources.sh",
-				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8747D33EBD8B560198B5B7CE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SorghumYield-Tests-SorghumYieldTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		93842EA19E018D7686749814 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,30 +506,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B65210742FE3AAB310268D3E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-frameworks.sh",
-				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EBD109D87393DD468BAFE3C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -642,21 +552,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8A697052203B5D400AF0E57 /* Sources */ = {
+		E8ADD6F7226D30AF00F7C3AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E834AC2F22419B1C0073E0E2 /* IntrovViewControllerTest.swift in Sources */,
+				E8ADD6FE226D30AF00F7C3AA /* SorghumYieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E8A6970F2203B5D400AF0E57 /* PBXTargetDependency */ = {
+		E8ADD701226D30AF00F7C3AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4B49612D1DE63EFA0085D4FE /* SorghumYield */;
-			targetProxy = E8A6970E2203B5D400AF0E57 /* PBXContainerItemProxy */;
+			targetProxy = E8ADD700226D30AF00F7C3AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -777,7 +687,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
-				DEVELOPMENT_TEAM = L7Q7ALQ68B;
+				DEVELOPMENT_TEAM = T7LK993P2F;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -792,7 +702,7 @@
 				);
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield;
+				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYield-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -807,7 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SorghumYield/SorghumYield.entitlements;
-				DEVELOPMENT_TEAM = L7Q7ALQ68B;
+				DEVELOPMENT_TEAM = T7LK993P2F;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -822,21 +732,19 @@
 				);
 				INFOPLIST_FILE = SorghumYield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield;
+				PRODUCT_BUNDLE_IDENTIFIER = bap.SorghumYield1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYield-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		E8A697102203B5D400AF0E57 /* Debug */ = {
+		E8ADD703226D30AF00F7C3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -850,6 +758,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T7LK993P2F;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = SorghumYieldTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -858,7 +767,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cs.ksu.SorghumYieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYieldTests/SorghumYieldTests-Bridging-Header.h";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -866,14 +775,12 @@
 			};
 			name = Debug;
 		};
-		E8A697112203B5D400AF0E57 /* Release */ = {
+		E8ADD704226D30AF00F7C3AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -887,6 +794,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T7LK993P2F;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = SorghumYieldTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -894,7 +802,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cs.ksu.SorghumYieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SorghumYieldTests/SorghumYieldTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SorghumYield.app/SorghumYield";
@@ -922,11 +830,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8A697122203B5D400AF0E57 /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */ = {
+		E8ADD702226D30AF00F7C3AA /* Build configuration list for PBXNativeTarget "SorghumYieldTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8A697102203B5D400AF0E57 /* Debug */,
-				E8A697112203B5D400AF0E57 /* Release */,
+				E8ADD703226D30AF00F7C3AA /* Debug */,
+				E8ADD704226D30AF00F7C3AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
