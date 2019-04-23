@@ -58,7 +58,12 @@
 
 // Skips the instruction screens
 -(void)skipInstructions:(id)sender {
-    [self performSegueWithIdentifier:@"TutorialEnd" sender:self];
+    // Creates picker view if needed - Strong reference to preserve data on text page
+    if (_pickerPage == nil) {
+        _pickerPage = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PhotoPickerScreenViewController"];
+        [_pickerPage setValue:self.managedObject forKey:@"managedObject"];
+    }
+    [[self navigationController] pushViewController:_pickerPage animated:true];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController

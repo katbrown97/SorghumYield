@@ -12,8 +12,8 @@
 @interface PageRootViewController : BaseViewController<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) BaseViewController *pickerPage;
 @property (strong, nonatomic) NSArray *pageTitles;
 @property (strong, nonatomic) NSArray *pageImages;
-
 
 @end
