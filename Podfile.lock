@@ -164,6 +164,9 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.17.0)
   - GTMSessionFetcher/Core (1.2.1)
+  - KIF (3.7.6):
+    - KIF/Core (= 3.7.6)
+  - KIF/Core (3.7.6)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -173,7 +176,6 @@ PODS:
   - Nimble (8.0.1)
   - OpenCV (2.4.9)
   - Protobuf (3.7.0)
-  - Quick (2.0.0)
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
@@ -184,9 +186,9 @@ PODS:
 DEPENDENCIES:
   - Firebase (~> 5.2)
   - FirebaseUI (~> 5.0)
+  - KIF
   - Nimble
   - OpenCV (= 2.4.9)
-  - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -211,12 +213,12 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - KIF
     - leveldb-library
     - nanopb
     - Nimble
     - OpenCV
     - Protobuf
-    - Quick
     - SDWebImage
     - TwitterCore
     - TwitterKit
@@ -243,16 +245,16 @@ SPEC CHECKSUMS:
   "gRPC-C++": e76441995900ac90e9bd98644ab4733f12521edf
   gRPC-Core: 4028031ed2c5267cca0d846c876d8046b1ecb9b6
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  KIF: ae73fd36b1c860588841cb27e7f6efc4477122e2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   OpenCV: bb17904e55fc19b1f0f6c3e29bc04a7dd31eddb9
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
-  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 043f9055bc9b1117ce9901e1c56a109067666183
+PODFILE CHECKSUM: 391053c803045141c2d36136c760f39234ac823e
 
 COCOAPODS: 1.5.3
