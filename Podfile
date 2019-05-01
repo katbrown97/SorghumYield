@@ -5,7 +5,7 @@ target 'SorghumYield' do
     pod 'FirebaseUI', '~>5.0'
 end
 
-target "SorghumYieldTests" do
+target "SorghumYieldUITests" do
     pod 'KIF', :configurations => ['Debug']
     pod 'Nimble'
 end

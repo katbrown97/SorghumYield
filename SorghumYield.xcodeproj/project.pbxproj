@@ -32,6 +32,7 @@
 		4B806B921DE65E3E00768A09 /* FieldDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B911DE65E3E00768A09 /* FieldDataViewController.m */; };
 		4B806B961DE6613200768A09 /* UITextField+TFCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B806B951DE6613200768A09 /* UITextField+TFCustomization.m */; };
 		8D2B816F578FA08401954543 /* libPods-SorghumYield.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */; };
+		A00C5B8F8E660CC37A5B6B88 /* libPods-SorghumYieldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BFDDA5D1CB1E8297CB99EC /* libPods-SorghumYieldUITests.a */; };
 		A13D5AD6217522B00038D4AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */; };
 		A1EEF2612240A6D0004B5024 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */; };
 		E8AE968E227A48D2008E4821 /* SorghumYieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE968D227A48D2008E4821 /* SorghumYieldUITests.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22BFDDA5D1CB1E8297CB99EC /* libPods-SorghumYieldUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYieldUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SorghumYield.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B35826D1DE77956008DE1BD /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataController.h; path = SorghumYield/DataController.h; sourceTree = "<group>"; };
 		4B3582701DE79BF6008DE1BD /* GeoLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoLocationViewController.h; path = SorghumYield/GeoLocationViewController.h; sourceTree = "<group>"; };
@@ -97,6 +99,8 @@
 		A13D5AD5217522B00038D4AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA7A83F2DB295213C18EBBB4 /* Pods-SorghumYieldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYieldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYieldUITests/Pods-SorghumYieldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D65F22D30FD31E4B5C002D78 /* Pods-SorghumYieldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYieldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYieldUITests/Pods-SorghumYieldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SorghumYield-Tests-SorghumYieldTests/Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8AE968B227A48D2008E4821 /* SorghumYieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorghumYieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE968D227A48D2008E4821 /* SorghumYieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorghumYieldUITests.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00C5B8F8E660CC37A5B6B88 /* libPods-SorghumYieldUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,7 @@
 				A1EEF2602240A6D0004B5024 /* libFirebaseCore.a */,
 				3981273769D6F9A09CC957E7 /* libPods-SorghumYield.a */,
 				F6D8E1FCDE421AE15E770207 /* libPods-SorghumYield-Tests-SorghumYieldTests.a */,
+				22BFDDA5D1CB1E8297CB99EC /* libPods-SorghumYieldUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 				FFECF1517F7E3C44C711BE11 /* Pods-SorghumYield.release.xcconfig */,
 				C1D65D4604B5983A76914892 /* Pods-SorghumYield-Tests-SorghumYieldTests.debug.xcconfig */,
 				DEF83A336FE766F8F023A918 /* Pods-SorghumYield-Tests-SorghumYieldTests.release.xcconfig */,
+				CA7A83F2DB295213C18EBBB4 /* Pods-SorghumYieldUITests.debug.xcconfig */,
+				D65F22D30FD31E4B5C002D78 /* Pods-SorghumYieldUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8AE9694227A48D2008E4821 /* Build configuration list for PBXNativeTarget "SorghumYieldUITests" */;
 			buildPhases = (
+				CE646A8F0376CC516081C846 /* [CP] Check Pods Manifest.lock */,
 				E8AE9687227A48D2008E4821 /* Sources */,
 				E8AE9688227A48D2008E4821 /* Frameworks */,
 				E8AE9689227A48D2008E4821 /* Resources */,
@@ -505,6 +514,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SorghumYield/Pods-SorghumYield-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE646A8F0376CC516081C846 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SorghumYieldUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EBD109D87393DD468BAFE3C9 /* [CP] Check Pods Manifest.lock */ = {
@@ -742,6 +773,7 @@
 		};
 		E8AE9692227A48D2008E4821 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7A83F2DB295213C18EBBB4 /* Pods-SorghumYieldUITests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -778,6 +810,7 @@
 		};
 		E8AE9693227A48D2008E4821 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65F22D30FD31E4B5C002D78 /* Pods-SorghumYieldUITests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
