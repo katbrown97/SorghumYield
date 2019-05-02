@@ -84,7 +84,7 @@ const static bool animates= NO;
         
         [_indicator stopAnimating];
         [self displayCurrentImage];
-        [_sizeLabel setText:[NSString stringWithFormat:@"Area of the head is : %.2lf inches²", [[_measurementHolder appArea] doubleValue]]];
+        [_sizeLabel setText:[NSString stringWithFormat:@"Area of head: %.2lf in²", [[_measurementHolder appArea] doubleValue]]];
     }
 }
 - (void) displayCurrentImage{

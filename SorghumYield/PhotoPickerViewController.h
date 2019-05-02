@@ -11,7 +11,7 @@
 #import <CoreData/CoreData.h>
 #import "BaseViewController.h"
 
-static int MinImageCount = 2;
+static int MaxImageCount = 10;
 
 
 static dispatch_once_t predicate;
@@ -19,11 +19,9 @@ static dispatch_once_t predicate;
 
 static NSString * DuplicateImageError  = @"You have already selected this image, please choose another one";
 static NSString * InvalidImageError = @"Your image could not be analyzed. Make sure you have avoided all common mistakes, and taken the image under good lighting conditions. Avoid strong shadows";
-static NSString * StatusAccepted = @"CHOOSE NEXT";
 static NSString * StatusDismissed= @"You specified that green outline does not match the plant, therefore it will not be counted in the calculation. Try to take the image again";
-static NSString * FINISHSTRING= @"CLICK NEXT";
 
-static NSString * ADDIMAGE= @"ADD %d MORE IMAGE%@";
+static NSString * ADDIMAGE= @"Add up to %d more image%@";
 
 @interface PhotoPickerScreenViewController : BaseViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 

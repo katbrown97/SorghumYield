@@ -12,7 +12,7 @@
 
 #import "FirebaseManager.h"
 
-static NSString * baseText = @"Seeds per lb";
+static NSString * baseText = @"Seeds per pound = ";
 
 // Create reference to firestore
 @interface ResultViewController ()
@@ -29,14 +29,15 @@ static NSString * baseText = @"Seeds per lb";
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
-    _keyData =  @[@"Average Plant Area",
+    _keyData =  @[@"Average plant area (in²)",
                   @"Grain count per plant" ,
                   @"Plants per acre",
                   
-                  @"Seeds Per Pound",
-                  @"Weight per plant(lb)",
-                  @"Yield Per acre (lb)",
-                  @"Yield Per acre (bu)",
+                  @"Seeds per pound",
+                  @"Weight per plant (lb)",
+                  @"Yield per acre (lb)",
+                  @"Yield per acre (bu)",
+                  @"Total yield (bu)",
                   ];
     _valueData = [[NSMutableArray alloc] init];
     
@@ -54,7 +55,7 @@ static NSString * baseText = @"Seeds per lb";
     self.db = [FIRFirestore firestore];
 }
 -(void) prepareView{
-    [self setTitle:@"Yield prediction"];
+    [self setTitle:@"Yield Prediction"];
     
     [self disableBackButton];
     
@@ -94,6 +95,7 @@ static NSString * baseText = @"Seeds per lb";
     [_valueData insertObject:[_formatter stringFromNumber:_weightPerPlant] atIndex:4];
     [_valueData insertObject:[_yieldPerAcre stringValue] atIndex:5];
     [_valueData insertObject:[_yieldPerAcreBU stringValue] atIndex:6];
+    [_valueData insertObject:[_totalYield stringValue] atIndex:7];
     [self.tableView reloadData];
 }
 
@@ -106,7 +108,7 @@ static NSString * baseText = @"Seeds per lb";
 -(void) reCalculateValues{
     [self setSeedsPerPound:[NSNumber numberWithInteger:_sliderValue.value]];
     
-    [_sliderCaption setText:[baseText stringByAppendingString:[NSString stringWithFormat:@" - %d", [_seedsPerPound intValue]]]];
+    [_sliderCaption setText:[baseText stringByAppendingString:[NSString stringWithFormat:@"%d", [_seedsPerPound intValue]]]];
     NSNumber * seedWeight = [NSNumber numberWithDouble:(1.0f/self.seedsPerPound.doubleValue)];
     double weightPerPlant = [seedWeight doubleValue] * [_grainsPerPlant floatValue];
     
@@ -114,8 +116,8 @@ static NSString * baseText = @"Seeds per lb";
     
     [self setYieldPerAcre:[NSNumber numberWithLong:([_weightPerPlant floatValue] * [_numberOfPlantsPerAcre floatValue] )]];
     
-    [self setYieldPerAcreBU:[NSNumber numberWithLong:([_yieldPerAcre floatValue]/56)]];
-    [self setTotalYield:[NSNumber numberWithLong:[_yieldPerAcreBU floatValue] * [_numberOfAcres intValue]]];
+    [self setYieldPerAcreBU:[NSNumber numberWithFloat:(round([_yieldPerAcre floatValue]*100/56)/100)]];
+    [self setTotalYield:[NSNumber numberWithFloat:(round([_yieldPerAcre floatValue]/56 * [_numberOfAcres intValue]*100)/100)]];
     [self updateTableViewSource];
     
 }
@@ -219,8 +221,8 @@ static NSString * baseText = @"Seeds per lb";
     
     // Sets user data when creating for the first time
     [ref2 setData:@{
-                    @"email": [FIRAuth auth].currentUser.email}
-            merge:YES
+        @"email": [FIRAuth auth].currentUser.email}
+        merge:YES
        completion:^(NSError * _Nullable error) {
            if (error != nil) {
                NSLog(@"Error adding document: %@", error);
@@ -308,7 +310,7 @@ static NSString * baseText = @"Seeds per lb";
         return 3;
     }
     if(section ==1){
-        return 4;
+        return 5;
     }
     return 0;
 }

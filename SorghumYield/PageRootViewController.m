@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupView];
     
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
@@ -30,14 +31,14 @@
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
-    _pageTitles = @[@"Prepare a sheet of paper", @"Draw a solid square", @"Place the plant", @"Valid result", @"Common mistakes", @"Plant off page", @"Plant touches square", @"Sharp angle", @"Sharp angle"];
+    _pageTitles = @[@"Prepare a sheet of paper", @"Draw a solid square", @"Place the plant", @"Valid result", @"Common mistakes...", @"Plant off page", @"Plant touches square", @"Sharp angle", @"Sharp angle"];
     _pageImages = @[@"stepOnePage.pdf", @"stepTwoPage.pdf", @"stepThreePage.pdf", @"stepFourPage" ,@"",@"Mistake1",@"Mistake2",@"Mistake3",@"Mistake3"];
 
     // Adds skip button
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Skip"
          style:UIBarButtonItemStylePlain
          target:self
-         action:@selector(skipInstructions:)];
+         action:@selector(pushPickerPage:)];
     [self.navigationItem setRightBarButtonItem:item animated:YES];
 
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
@@ -56,8 +57,18 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
+
+- (void)setupView{
+    [self setTitle:@"Photo Instructions"];
+}
+
 // Skips the instruction screens
--(void)skipInstructions:(id)sender {
+-(void)pushPickerPage:(id)sender {
     // Creates picker view if needed - Strong reference to preserve data on text page
     if (_pickerPage == nil) {
         _pickerPage = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PhotoPickerScreenViewController"];
@@ -120,7 +131,7 @@
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers{
     
     if([pendingViewControllers[0] pageIndex]==_pageImages.count-1){
-        [self performSegueWithIdentifier:@"TutorialEnd" sender:self];
+        [self pushPickerPage:nil];
     }
 }
 

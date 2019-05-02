@@ -22,6 +22,7 @@
     
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
     self.titleLabel.text = self.titleText;
+    self.titleLabel.font = [UIFont boldSystemFontOfSize:18.0];
     
     if(_pageIndex==1){
         _orLabel.hidden=false;

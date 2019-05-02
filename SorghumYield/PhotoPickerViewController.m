@@ -32,10 +32,14 @@
     
     [_tableView setBackgroundColor:[UIColor clearColor]];
     [_tableView setBackgroundView:nil];
-}
+    
+    [[[self takePhotoButton] imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [[[self selectPhotoButton] imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    }
 
 - (void)setupView{
-    [self setTitle:@"Take/upload photos"];
+    [self setTitle:@"Take/Upload Photos"];
+    [self updateLabel];
 }
 
 /*! @brief Method for initializing camera action*/
@@ -101,8 +105,8 @@
     
     _currentMeasurement = [[Measurement alloc] init];
     
-    if(picker.sourceType == UIImagePickerControllerSourceTypeSavedPhotosAlbum){
-        for (int i = 0; i< _measurements.count; i++) {
+    if(picker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary){
+        for (int i = 0; i < _measurements.count; i++) {
             NSURL * curImageString = [_measurements[i] originalImageURL];
             if([curImageString isEqual:info[UIImagePickerControllerReferenceURL]]){
                 [picker dismissViewControllerAnimated:NO completion:^{[self presentAlert:DuplicateImageError withTitle:@"Duplicate Image"];}];
@@ -151,7 +155,7 @@
 }
 -(void) handleMeasurementAccepted{
     [_measurements addObject:_currentMeasurement];
-    if(_measurements.count>=MinImageCount){
+    if(_measurements.count>=MaxImageCount){
         _yieldButton.enabled=YES;
         _takePhotoButton.enabled=NO;
         _selectPhotoButton.enabled =NO;
@@ -174,14 +178,15 @@
 }
 -(void)updateLabel{
     NSString * message;
-    if(_measurements.count==1)
-        message = [NSString stringWithFormat:ADDIMAGE,(MinImageCount-_measurements.count),@""];
-    else if(_measurements.count == MinImageCount)
-        message = @"CLICK NEXT";
+    if(MaxImageCount - _measurements.count == 1)
+        message = [NSString stringWithFormat:ADDIMAGE,(MaxImageCount-_measurements.count),@""];
+    else if(_measurements.count == MaxImageCount)
+        message = @"Click next";
+    else if(_measurements.count == 0)
+        message = [NSString stringWithFormat:@"Add up to %d images", MaxImageCount];
     else
-        message = [NSString stringWithFormat:ADDIMAGE,(MinImageCount-_measurements.count),@"S"];
+        message = [NSString stringWithFormat:ADDIMAGE,(MaxImageCount-_measurements.count),@"s"];
     _statusLabel.text = message;
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -217,8 +222,8 @@
     [formatter setRoundingMode: NSNumberFormatterRoundUp];
     
     NSString *numberString = [formatter stringFromNumber:curAppArea];
-    NSString * message = @"Area is: ";
-    [cell.textLabel setText:[message stringByAppendingString:numberString ]];
+    NSString * message = [@"Area: " stringByAppendingString:numberString];
+    [cell.textLabel setText:[message stringByAppendingString:@" in²"]];
     
     return cell;
 }

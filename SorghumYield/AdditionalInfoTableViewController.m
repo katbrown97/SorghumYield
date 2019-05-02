@@ -34,6 +34,7 @@
                                   style:UIAlertActionStyleDefault
                                   handler:nil];
     [alert addAction:closeButton];
+    
     [self presentViewController:alert animated:YES completion:nil];
     
 }
@@ -66,6 +67,18 @@
     }
     if(indexPath.section==1 && indexPath.row == 1){
         NSString *html = @"http://www.bookstore.ksre.ksu.edu/pubs/c687.pdf";
+        NSURL *url = [NSURL URLWithString:html];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        
+    }
+    if(indexPath.section==2 && indexPath.row == 0){
+        NSString *html = @"https://thenounproject.com/search/?q=camera&i=2463341";
+        NSURL *url = [NSURL URLWithString:html];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        
+    }
+    if(indexPath.section==2 && indexPath.row == 1){
+        NSString *html = @"https://thenounproject.com/search/?q=gallery&i=1632545";
         NSURL *url = [NSURL URLWithString:html];
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         
