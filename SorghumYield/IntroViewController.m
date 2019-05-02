@@ -33,6 +33,7 @@ FUIAuth *authUI;
         authUI = [FUIAuth defaultAuthUI];
         authUI.delegate = self;
         UINavigationController *authViewController = [authUI authViewController];
+        
         [self presentViewController:authViewController animated:true completion:Nil]; // Display the view for firebaseUI sign in
     }else{ // Otherwise sign out
         [self signOut];

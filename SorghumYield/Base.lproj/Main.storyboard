@@ -38,7 +38,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-O7-z50">
                                 <rect key="frame" x="31" y="608" width="313" height="50"/>
-                                <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton" label="loginButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HT0-LC-QOH"/>
                                     <constraint firstAttribute="width" constant="313" id="WZM-4j-kJl"/>

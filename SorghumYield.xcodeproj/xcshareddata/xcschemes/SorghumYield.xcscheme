@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8A697082203B5D400AF0E57"
-               BuildableName = "SorghumYieldTests.xctest"
-               BlueprintName = "SorghumYieldTests"
+               BlueprintIdentifier = "E8AE968A227A48D2008E4821"
+               BuildableName = "SorghumYieldUITests.xctest"
+               BlueprintName = "SorghumYieldUITests"
                ReferencedContainer = "container:SorghumYield.xcodeproj">
             </BuildableReference>
          </TestableReference>
