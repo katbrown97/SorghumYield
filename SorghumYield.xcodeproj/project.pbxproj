@@ -429,10 +429,9 @@
 			};
 			buildConfigurationList = 4B4961291DE63EFA0085D4FE /* Build configuration list for PBXProject "SorghumYield" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
